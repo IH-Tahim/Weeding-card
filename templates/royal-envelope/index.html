@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wedding Invitation</title>
+<meta name="description" content="You're invited — tap to open your wedding invitation.">
+<meta property="og:title" content="You're invited 💌">
+<meta property="og:description" content="Tap to open your wedding invitation.">
+<meta name="theme-color" content="#f6efe2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Tiro+Bangla:ital@0;1&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ ENVELOPE (opening screen) ============ -->
+<section id="cover" class="cover" aria-label="Invitation envelope">
+  <p class="cover-dear" id="dear"></p>
+  <div class="envelope" id="envelope">
+    <div class="env-back"></div>
+    <div class="env-letter">
+      <span class="letter-mono" data-mono></span>
+      <span class="letter-line"></span>
+      <span class="letter-line short"></span>
+    </div>
+    <div class="env-front"></div>
+    <div class="env-flap"></div>
+    <button class="seal" id="seal" aria-label="Tap the seal to open">
+      <span class="seal-mono" data-mono></span>
+    </button>
+  </div>
+  <p class="cover-hint" data-i18n="tapSeal"></p>
+  <button class="lang-btn cover-lang" data-lang-toggle></button>
+</section>
+
+<!-- ============ INVITATION ============ -->
+<main id="card" class="card" hidden>
+  <div class="petals" aria-hidden="true"></div>
+
+  <div class="top-bar">
+    <button class="lang-btn" data-lang-toggle></button>
+    <button class="music-btn" id="musicBtn" hidden aria-label="Music on/off">♪</button>
+  </div>
+
+  <!-- Hero -->
+  <section class="panel hero">
+    <div class="frame">
+      <p class="bismillah" id="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+      <div class="mono-ring"><span data-mono></span></div>
+      <p class="eyebrow" data-i18n="together"></p>
+      <h1 class="names">
+        <span id="groomShort"></span>
+        <span class="amp">&amp;</span>
+        <span id="brideShort"></span>
+      </h1>
+      <div class="divider"></div>
+      <p class="message" id="message"></p>
+      <p class="hero-date" id="heroDate"></p>
+      <p class="scroll-hint" data-i18n="scroll"></p>
+    </div>
+  </section>
+
+  <!-- Couple -->
+  <section class="panel reveal">
+    <p class="eyebrow" data-i18n="coupleTitle"></p>
+    <h2 class="script-title" data-i18n="coupleHeading"></h2>
+    <div class="couple">
+      <div class="person">
+        <p class="role" data-i18n="groom"></p>
+        <h3 id="groomFull"></h3>
+        <p class="parents" id="groomParents"></p>
+      </div>
+      <div class="amp big">&amp;</div>
+      <div class="person">
+        <p class="role" data-i18n="bride"></p>
+        <h3 id="brideFull"></h3>
+        <p class="parents" id="brideParents"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section class="panel reveal">
+    <p class="eyebrow" data-i18n="eventsTitle"></p>
+    <h2 class="script-title" data-i18n="eventsHeading"></h2>
+    <div class="events" id="events"></div>
+  </section>
+
+  <!-- Countdown -->
+  <section class="panel reveal">
+    <p class="eyebrow" data-i18n="saveDate"></p>
+    <h2 class="script-title" data-i18n="countdownHeading"></h2>
+    <div class="countdown" id="countdown">
+      <div><b data-cd="d">0</b><span data-i18n="days"></span></div>
+      <div><b data-cd="h">0</b><span data-i18n="hours"></span></div>
+      <div><b data-cd="m">0</b><span data-i18n="minutes"></span></div>
+      <div><b data-cd="s">0</b><span data-i18n="seconds"></span></div>
+    </div>
+    <p class="countdown-done" id="countdownDone" hidden data-i18n="married"></p>
+    <p class="muted" id="countdownLabel"></p>
+  </section>
+
+  <!-- Gallery -->
+  <section class="panel reveal" id="gallerySection" hidden>
+    <p class="eyebrow" data-i18n="galleryTitle"></p>
+    <h2 class="script-title" data-i18n="galleryHeading"></h2>
+    <div class="gallery" id="gallery"></div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="panel reveal" id="rsvpSection">
+    <p class="eyebrow" data-i18n="rsvpTitle"></p>
+    <h2 class="script-title" data-i18n="rsvpHeading"></h2>
+    <p class="muted" id="rsvpDeadline"></p>
+    <form class="rsvp" id="rsvpForm" novalidate>
+      <label><span data-i18n="yourName"></span>
+        <input name="name" id="rsvpName" required maxlength="60" autocomplete="name">
+      </label>
+      <div class="choice">
+        <label><input type="radio" name="attending" value="yes" checked><span data-i18n="accept"></span></label>
+        <label><input type="radio" name="attending" value="no"><span data-i18n="decline"></span></label>
+      </div>
+      <label id="guestsWrap"><span data-i18n="guests"></span>
+        <select name="guests">
+          <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option>
+        </select>
+      </label>
+      <label><span data-i18n="note"></span>
+        <textarea name="message" rows="3" maxlength="200"></textarea>
+      </label>
+      <button class="btn" type="submit" data-i18n="send"></button>
+      <p class="form-status" id="rsvpStatus" role="status"></p>
+    </form>
+  </section>
+
+  <!-- Contacts -->
+  <section class="panel reveal" id="contactSection">
+    <p class="eyebrow" data-i18n="contactTitle"></p>
+    <div class="contacts" id="contacts"></div>
+  </section>
+
+  <!-- Thank you -->
+  <section class="panel reveal thanks">
+    <p class="eyebrow" data-i18n="gratitude"></p>
+    <h2 class="script-title" data-i18n="thanks"></h2>
+    <p class="message" id="closing"></p>
+    <p class="signoff" id="signoff"></p>
+    <p class="hashtag" id="hashtag"></p>
+    <button class="btn ghost" id="readAgain" data-i18n="readAgain"></button>
+  </section>
+
+  <footer class="credit">Made with ♥ by <span id="brand">Your Brand</span></footer>
+</main>
+
+<div class="rotate-msg" data-i18n="rotate"></div>
+<audio id="music" loop preload="none"></audio>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

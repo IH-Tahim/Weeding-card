@@ -1,0 +1,8 @@
+# Private / not for the public repo
+*.mp4
+Business-Plan.md
+.claude/
+
+# OS clutter
+Thumbs.db
+.DS_Store
