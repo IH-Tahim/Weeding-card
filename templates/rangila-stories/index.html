@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wedding Invitation</title>
+<meta name="description" content="You're invited — open the doors to see your wedding invitation.">
+<meta property="og:title" content="You're invited 🌼">
+<meta property="og:description" content="Open the doors to see your wedding invitation.">
+<meta name="theme-color" content="#c2185b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Baloo+Da+2:wght@400;500;600;700&family=Galada&family=Yeseva+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ GATE (opening screen) ============ -->
+<section class="gate" id="gate" aria-label="Invitation gate">
+  <div class="bunting" aria-hidden="true"></div>
+  <div class="garland" aria-hidden="true"></div>
+  <div class="doors" id="doors">
+    <div class="door left"><span class="knocker"></span></div>
+    <div class="door right"><span class="knocker"></span></div>
+    <div class="gate-text">
+      <p class="gate-dear" id="dear"></p>
+      <p class="gate-sub" data-i18n="invited"></p>
+      <button class="open-btn" id="openBtn" data-i18n="openDoors"></button>
+    </div>
+  </div>
+  <button class="pill lang" data-lang-toggle></button>
+</section>
+
+<!-- ============ STORIES ============ -->
+<main class="stage" id="stage" hidden>
+  <div class="bars" id="bars"></div>
+  <div class="stage-top">
+    <span class="mono-chip" data-mono></span>
+    <span class="spacer"></span>
+    <button class="pill" id="musicBtn" hidden aria-label="Music on/off">♪</button>
+    <button class="pill" data-lang-toggle></button>
+  </div>
+  <div class="slides" id="slides" aria-live="polite"></div>
+  <button class="nav prev" id="prevBtn" aria-label="Previous">‹</button>
+  <button class="nav next" id="nextBtn" aria-label="Next">›</button>
+</main>
+
+<div class="rotate-msg" data-i18n="rotate"></div>
+<audio id="music" loop preload="none"></audio>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

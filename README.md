@@ -5,8 +5,10 @@ Mobile-first wedding invitation websites for Bangladesh: an animated envelope op
 ## Templates
 | Template | Style | Folder |
 |---|---|---|
-| Royal Envelope | Ivory & gold, wax seal | [`templates/royal-envelope`](templates/royal-envelope) |
+| Royal Envelope | Classic ivory & gold, tap the wax seal | [`templates/royal-envelope`](templates/royal-envelope) |
+| Rangila Stories | Colourful Bangla folk art, story slides | [`templates/rangila-stories`](templates/rangila-stories) |
+| Midnight Scratch | Navy & gold luxury, scratch to reveal | [`templates/midnight-scratch`](templates/midnight-scratch) |
 
-Live demo: `https://ih-tahim.github.io/Weeding-card/templates/royal-envelope/?to=Guest`
+Showcase: https://ih-tahim.github.io/Weeding-card/
 
 See each template's README for how to make a card for a client.

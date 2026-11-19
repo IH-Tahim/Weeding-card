@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wedding Invitation</title>
+<meta name="description" content="Scratch the gold to reveal the date — your wedding invitation.">
+<meta property="og:title" content="A secret date is waiting for you ✨">
+<meta property="og:description" content="Scratch the gold to reveal your wedding invitation.">
+<meta name="theme-color" content="#0b1530">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400&family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Hind+Siliguri:wght@400;500;600&family=Noto+Serif+Bengali:wght@400;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+<div class="sky" aria-hidden="true"><div class="stars s1"></div><div class="stars s2"></div></div>
+<div class="lanterns" aria-hidden="true"></div>
+
+<!-- ============ SCRATCH CARD (opening screen) ============ -->
+<section class="intro" id="intro">
+  <button class="pill lang-pos" data-lang-toggle></button>
+  <p class="intro-dear" id="dear"></p>
+  <p class="intro-sub" data-i18n="secret"></p>
+
+  <div class="scratch" id="scratch">
+    <div class="scratch-under">
+      <span class="u-mono" data-mono></span>
+      <span class="u-names" id="uNames"></span>
+      <span class="u-date" id="uDate"></span>
+    </div>
+    <canvas id="foil" aria-label="Scratch the gold foil"></canvas>
+  </div>
+
+  <p class="intro-hint" id="hint" data-i18n="scratchHint"></p>
+  <button class="btn" id="enterBtn" hidden data-i18n="enter"></button>
+  <button class="skip" id="skipBtn" data-i18n="skip"></button>
+</section>
+
+<!-- ============ INVITATION ============ -->
+<main class="page" id="page" hidden>
+  <div class="top-bar">
+    <button class="pill" id="musicBtn" hidden aria-label="Music on/off">♪</button>
+    <button class="pill" data-lang-toggle></button>
+  </div>
+
+  <header class="hero">
+    <svg class="moon" viewBox="0 0 100 100" aria-hidden="true">
+      <defs><linearGradient id="gm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff1c9"/><stop offset="1" stop-color="#c9a24f"/></linearGradient></defs>
+      <path d="M62 8a42 42 0 1 0 30 70A36 36 0 1 1 62 8z" fill="url(#gm)"/>
+      <path d="M78 22l2.4 5.6 6 .5-4.6 3.9 1.4 5.9-5.2-3.2-5.2 3.2 1.4-5.9-4.6-3.9 6-.5z" fill="#fff1c9"/>
+    </svg>
+    <p class="bismillah" id="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+    <p class="label" data-i18n="weddingOf"></p>
+    <h1 class="names"><span id="gName"></span><em>&amp;</em><span id="bName"></span></h1>
+    <p class="msg" id="message"></p>
+    <p class="hero-date" id="heroDate"></p>
+  </header>
+
+  <section class="sec fade">
+    <p class="label" data-i18n="families"></p>
+    <div class="arches">
+      <div class="arch"><p class="role" data-i18n="groom"></p><h3 id="gFull"></h3><p id="gParents"></p></div>
+      <div class="arch"><p class="role" data-i18n="bride"></p><h3 id="bFull"></h3><p id="bParents"></p></div>
+    </div>
+  </section>
+
+  <section class="sec fade">
+    <p class="label" data-i18n="schedule"></p>
+    <h2 class="title" data-i18n="scheduleH"></h2>
+    <ol class="timeline" id="timeline"></ol>
+  </section>
+
+  <section class="sec fade">
+    <p class="label" data-i18n="countdown"></p>
+    <h2 class="title" id="cdTitle"></h2>
+    <div class="rings" id="rings"></div>
+    <p class="done" id="cdDone" hidden data-i18n="married"></p>
+  </section>
+
+  <section class="sec fade" id="gallerySec" hidden>
+    <p class="label" data-i18n="moments"></p>
+    <div class="strip" id="strip"></div>
+  </section>
+
+  <section class="sec fade" id="rsvpSec">
+    <p class="label" data-i18n="rsvp"></p>
+    <h2 class="title" data-i18n="rsvpH"></h2>
+    <p class="note" id="deadline"></p>
+    <form class="rsvp" id="rsvpForm" novalidate>
+      <label><span data-i18n="yourName"></span><input id="rName" name="name" maxlength="60" autocomplete="name"></label>
+      <div class="choice">
+        <label><input type="radio" name="attending" value="yes" checked><span data-i18n="accept"></span></label>
+        <label><input type="radio" name="attending" value="no"><span data-i18n="decline"></span></label>
+      </div>
+      <label id="guestsWrap"><span data-i18n="guests"></span>
+        <select name="guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select>
+      </label>
+      <label><span data-i18n="wish"></span><textarea name="message" rows="3" maxlength="200"></textarea></label>
+      <button class="btn" type="submit" data-i18n="send"></button>
+      <p class="status" id="status" role="status"></p>
+    </form>
+  </section>
+
+  <section class="sec fade end">
+    <div class="contacts" id="contacts"></div>
+    <h2 class="title big" data-i18n="thanks"></h2>
+    <p class="msg" id="closing"></p>
+    <p class="sign" id="sign"></p>
+    <p class="tag" id="hashtag"></p>
+    <p class="credit">Made with ♥ by <span id="brand"></span></p>
+  </section>
+</main>
+
+<div class="rotate-msg" data-i18n="rotate"></div>
+<audio id="music" loop preload="none"></audio>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

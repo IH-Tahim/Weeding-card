@@ -3,11 +3,109 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Wedding Invitation Demo</title>
-<meta http-equiv="refresh" content="0; url=templates/royal-envelope/index.html">
-<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#f8f2e6;color:#8c6623;font:16px system-ui,sans-serif}</style>
+<title>Digital Wedding Invitations</title>
+<meta name="description" content="Animated digital wedding invitation websites for Bangladesh — one link, every guest by name, English & Bangla.">
+<meta property="og:title" content="Digital Wedding Invitations 💌">
+<meta property="og:description" content="Tap a design to try the live demo on your phone.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Hind+Siliguri:wght@400;500;600&family=Yeseva+One&family=Cinzel:wght@600&family=Galada&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#faf5ec; --ink:#2d2418; --muted:#7a6c58; --line:#e7dcc8; --accent:#b48a3c; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--ink); font:16px/1.55 "Hind Siliguri", system-ui, sans-serif; }
+  .wrap { max-width:1040px; margin:0 auto; padding:40px 16px 60px; }
+  header { text-align:center; margin-bottom:34px; }
+  .kicker { font-size:12px; letter-spacing:.3em; text-transform:uppercase; color:var(--accent); font-weight:600; }
+  h1 { font-family:"Great Vibes", cursive; font-weight:400; font-size:clamp(44px, 10vw, 64px); color:var(--accent); line-height:1.1; margin:6px 0; }
+  header p { color:var(--muted); max-width:52ch; margin:0 auto; }
+  .bn { font-size:15px; margin-top:4px; }
+  .grid { display:grid; gap:20px; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); }
+  .card { background:#fff; border:1px solid var(--line); border-radius:16px; overflow:hidden; display:flex; flex-direction:column; box-shadow:0 10px 30px -18px rgba(60,40,10,.35); transition:transform .2s; }
+  .card:hover { transform:translateY(-3px); }
+  .thumb { height:230px; display:grid; place-items:center; position:relative; overflow:hidden; }
+  .body { padding:18px 18px 20px; display:flex; flex-direction:column; gap:8px; flex:1; }
+  .body h2 { font-size:20px; }
+  .tags { display:flex; gap:6px; flex-wrap:wrap; }
+  .tags span { font-size:12px; padding:2px 10px; border-radius:99px; background:#f4ecdc; color:#6b5532; }
+  .body p { color:var(--muted); font-size:15px; flex:1; }
+  .btn { align-self:flex-start; margin-top:6px; padding:10px 18px; border-radius:99px; text-decoration:none; font-weight:600; font-size:15px; color:#fff; background:var(--accent); }
+
+  /* thumbnails drawn in CSS */
+  .t-royal { background:radial-gradient(circle, #fffaf0, #efe2c6); }
+  .t-royal .env { width:190px; height:126px; position:relative; border-radius:6px; background:linear-gradient(170deg,#fdf8ee,#f2e6cf); box-shadow:0 18px 30px -14px rgba(90,64,20,.5); }
+  .t-royal .env::before { content:""; position:absolute; inset:0; clip-path:polygon(0 0,100% 0,50% 60%); background:linear-gradient(180deg,#fffaf0,#e9dbbb); }
+  .t-royal .seal { position:absolute; left:50%; top:60%; width:46px; height:46px; margin:-23px 0 0 -23px; border-radius:50%; background:radial-gradient(circle at 35% 30%, #f6dd9b, #d9b56a 35%, #b48a3c 65%, #8c6623); display:grid; place-items:center; color:#fff8e6; font-family:"Great Vibes"; font-size:18px; }
+  .t-rangila { background:linear-gradient(170deg,#e91e63,#9c0d42); color:#fff6e0; text-align:center; }
+  .t-rangila::before { content:""; position:absolute; top:0; left:0; right:0; height:22px; background:repeating-linear-gradient(90deg,#ffd54f 0 18px,#2e9e4f 18px 36px,#1e4fa8 36px 54px,#f9a825 54px 72px); clip-path:polygon(0 0,100% 0,100% 40%,97% 100%,94% 40%,91% 100%,88% 40%,85% 100%,82% 40%,79% 100%,76% 40%,73% 100%,70% 40%,67% 100%,64% 40%,61% 100%,58% 40%,55% 100%,52% 40%,49% 100%,46% 40%,43% 100%,40% 40%,37% 100%,34% 40%,31% 100%,28% 40%,25% 100%,22% 40%,19% 100%,16% 40%,13% 100%,10% 40%,7% 100%,4% 40%,1% 100%,0 40%); }
+  .t-rangila b { display:block; font-family:"Yeseva One"; font-weight:400; font-size:40px; line-height:1; }
+  .t-rangila i { display:inline-block; margin:6px 0; padding:2px 14px; border-radius:99px; background:#ffd54f; color:#3a1a0e; font-style:normal; font-weight:700; transform:rotate(-4deg); }
+  .t-rangila .bars { position:absolute; top:30px; left:16px; right:16px; display:flex; gap:4px; }
+  .t-rangila .bars span { flex:1; height:3px; border-radius:3px; background:rgba(255,255,255,.4); }
+  .t-rangila .bars span:first-child { background:#fff; }
+  .t-midnight { background:radial-gradient(ellipse at 50% 0%, #1c2f60, #0b1530 70%); }
+  .t-midnight::before { content:""; position:absolute; inset:0; background-image:radial-gradient(1px 1px at 20px 30px,#fff,transparent),radial-gradient(1px 1px at 120px 80px,#fff,transparent),radial-gradient(1.5px 1.5px at 200px 50px,#fff1c9,transparent),radial-gradient(1px 1px at 60px 150px,#fff,transparent); background-size:240px 200px; opacity:.7; }
+  .t-midnight .foil { position:relative; width:200px; height:132px; border-radius:12px; overflow:hidden; background:linear-gradient(135deg,#a8802f,#f3d98f 30%,#c9a24f 50%,#fff1c9 72%,#b08835); display:grid; place-items:center; font-family:"Cinzel"; font-size:13px; color:rgba(95,64,15,.8); box-shadow:0 20px 40px -14px #000; }
+  .t-midnight .foil::after { content:"15 · 01 · 2027"; position:absolute; left:0; right:0; bottom:0; height:46%; display:grid; place-items:center; background:#13224a; color:#e3c27a; font-size:20px; clip-path:polygon(0 30%, 18% 0, 40% 25%, 62% 0, 84% 28%, 100% 5%, 100% 100%, 0 100%); }
+
+  .how { margin-top:44px; background:#fff; border:1px solid var(--line); border-radius:16px; padding:24px 20px; }
+  .how h3 { font-size:18px; margin-bottom:12px; }
+  .how ol { padding-left:20px; display:grid; gap:6px; color:var(--muted); }
+  footer { text-align:center; color:var(--muted); font-size:13px; margin-top:30px; }
+</style>
 </head>
 <body>
-<a href="templates/royal-envelope/index.html">Open the invitation →</a>
+<div class="wrap">
+  <header>
+    <p class="kicker">Digital wedding invitations</p>
+    <h1>One link. Every guest by name.</h1>
+    <p>Animated invitation websites for Bangladeshi weddings. Holud, Akdh, Biye and Walima in one link, in English & বাংলা, with maps, a countdown and RSVP.</p>
+    <p class="bn">একটি লিংকেই পুরো বিয়ের দাওয়াত — প্রতিটি অতিথির নামে আলাদা লিংক।</p>
+  </header>
+
+  <div class="grid">
+    <article class="card">
+      <div class="thumb t-royal"><div class="env"><div class="seal">R&amp;N</div></div></div>
+      <div class="body">
+        <h2>Royal Envelope</h2>
+        <div class="tags"><span>Classic</span><span>Ivory &amp; gold</span><span>Scroll</span></div>
+        <p>The guest taps a gold wax seal, the envelope opens and the letter rises. An elegant, timeless look.</p>
+        <a class="btn" href="templates/royal-envelope/index.html?to=Guest">View live demo →</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="thumb t-rangila"><div class="bars"><span></span><span></span><span></span><span></span><span></span></div><div><b>Rafi</b><i>weds</i><b>Nusrat</b></div></div>
+      <div class="body">
+        <h2>Rangila Stories</h2>
+        <div class="tags"><span>Fun &amp; colourful</span><span>Bangla folk art</span><span>Story slides</span></div>
+        <p>Painted doors swing open, then the invitation plays like Instagram stories, one tap per page. Perfect for Gaye Holud.</p>
+        <a class="btn" href="templates/rangila-stories/index.html?to=Guest">View live demo →</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="thumb t-midnight"><div class="foil">✦ SCRATCH HERE ✦</div></div>
+      <div class="body">
+        <h2>Midnight Scratch</h2>
+        <div class="tags"><span>Luxury</span><span>Navy &amp; gold</span><span>Scratch to reveal</span></div>
+        <p>Guests scratch gold foil with a finger to reveal your date. Then a moonlit page with floating lanterns opens.</p>
+        <a class="btn" href="templates/midnight-scratch/index.html?to=Guest">View live demo →</a>
+      </div>
+    </article>
+  </div>
+
+  <section class="how">
+    <h3>Every design includes</h3>
+    <ol>
+      <li>A personal link for each guest: "Dear Tahim…"</li>
+      <li>English and বাংলা with one tap</li>
+      <li>All your events with Google Maps directions and "Add to calendar"</li>
+      <li>A live countdown, a photo gallery and background music</li>
+      <li>RSVP straight to a Google Sheet or WhatsApp</li>
+    </ol>
+  </section>
+  <footer>Try a demo with your own name: add <code>?to=YourName</code> to the link.</footer>
+</div>
 </body>
 </html>
