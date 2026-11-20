@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wedding Invitation</title>
+<meta name="description" content="Pull down to unroll your wedding invitation.">
+<meta property="og:title" content="You're invited 📜">
+<meta property="og:description" content="Pull down to unroll your wedding invitation.">
+<meta name="theme-color" content="#0b3d2e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Italianno&family=Marcellus+SC&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Tiro+Bangla:ital@0;1&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+
+<div class="top-bar">
+  <button class="pill" id="musicBtn" hidden aria-label="Music on/off">♪</button>
+  <button class="pill" data-lang-toggle></button>
+</div>
+
+<p class="dear" id="dear"></p>
+
+<div class="scroll" id="scroll">
+  <div class="roller top" aria-hidden="true"><i></i></div>
+
+  <div class="paper" id="paper">
+    <div class="paper-inner" id="inner">
+
+      <header class="sec arch-head">
+        <svg class="arch-svg" viewBox="0 0 300 170" aria-hidden="true">
+          <path d="M20 168 V92 C20 48 92 30 150 4 C208 30 280 48 280 92 V168" fill="none" stroke="#b8923a" stroke-width="2"/>
+          <path d="M34 168 V96 C34 58 98 42 150 18 C202 42 266 58 266 96 V168" fill="none" stroke="#b8923a" stroke-width="1" opacity=".6"/>
+          <circle cx="150" cy="4" r="3.5" fill="#b8923a"/>
+        </svg>
+        <p class="bismillah" id="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+      </header>
+
+      <section class="sec verse" id="verse">
+        <p class="ar">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا</p>
+        <p class="tr" data-i18n="verseTr"></p>
+        <p class="ref" data-i18n="verseRef"></p>
+      </section>
+
+      <section class="sec">
+        <p class="label" data-i18n="request"></p>
+        <h1 class="names"><span id="gName"></span><em data-i18n="and"></em><span id="bName"></span></h1>
+        <p class="msg" id="message"></p>
+        <div class="star-date"><span class="star8"></span><b id="heroDate"></b><span class="star8"></span></div>
+      </section>
+
+      <section class="sec">
+        <div class="families">
+          <div><p class="role" data-i18n="groom"></p><h3 id="gFull"></h3><p class="par" id="gParents"></p></div>
+          <span class="star8 big" aria-hidden="true"></span>
+          <div><p class="role" data-i18n="bride"></p><h3 id="bFull"></h3><p class="par" id="bParents"></p></div>
+        </div>
+      </section>
+
+      <section class="sec">
+        <p class="label" data-i18n="events"></p>
+        <div class="events" id="events"></div>
+      </section>
+
+      <section class="sec">
+        <p class="label" data-i18n="countdown"></p>
+        <div class="stars-cd" id="cd">
+          <div><span class="badge"><b data-cd="d">0</b></span><small data-i18n="days"></small></div>
+          <div><span class="badge"><b data-cd="h">0</b></span><small data-i18n="hours"></small></div>
+          <div><span class="badge"><b data-cd="m">0</b></span><small data-i18n="minutes"></small></div>
+          <div><span class="badge"><b data-cd="s">0</b></span><small data-i18n="seconds"></small></div>
+        </div>
+        <p class="done" id="cdDone" hidden data-i18n="married"></p>
+        <p class="msg small" id="cdLabel"></p>
+      </section>
+
+      <section class="sec" id="gallerySec" hidden>
+        <p class="label" data-i18n="moments"></p>
+        <div class="gallery" id="gallery"></div>
+      </section>
+
+      <section class="sec" id="rsvpSec">
+        <p class="label" data-i18n="rsvp"></p>
+        <h2 class="h2" data-i18n="rsvpH"></h2>
+        <p class="msg small" id="deadline"></p>
+        <form class="rsvp" id="rsvpForm" novalidate>
+          <label><span data-i18n="yourName"></span><input id="rName" name="name" maxlength="60" autocomplete="name"></label>
+          <div class="choice">
+            <label><input type="radio" name="attending" value="yes" checked><span data-i18n="accept"></span></label>
+            <label><input type="radio" name="attending" value="no"><span data-i18n="decline"></span></label>
+          </div>
+          <label id="guestsWrap"><span data-i18n="guests"></span>
+            <select name="guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select>
+          </label>
+          <label><span data-i18n="wish"></span><textarea name="message" rows="3" maxlength="200"></textarea></label>
+          <button class="btn" type="submit" data-i18n="send"></button>
+          <p class="status" id="status" role="status"></p>
+        </form>
+      </section>
+
+      <section class="sec">
+        <div class="contacts" id="contacts"></div>
+      </section>
+
+      <section class="sec end">
+        <p class="ar dua">بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</p>
+        <p class="tr" data-i18n="duaTr"></p>
+        <h2 class="h2" data-i18n="thanks"></h2>
+        <p class="msg" id="closing"></p>
+        <p class="sign" id="sign"></p>
+        <p class="tag" id="hashtag"></p>
+        <p class="credit">Made with ♥ by <span id="brand"></span></p>
+      </section>
+
+    </div>
+    <button class="seal" id="seal" aria-label="Open the scroll"><span data-mono></span></button>
+  </div>
+
+  <div class="roller bottom" id="handle" role="button" tabindex="0" aria-label="Pull down to open"><i></i></div>
+</div>
+
+<p class="hint" id="hint" data-i18n="pull"></p>
+
+<div class="rotate-msg" data-i18n="rotate"></div>
+<audio id="music" loop preload="none"></audio>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

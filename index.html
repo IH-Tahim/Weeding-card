@@ -9,7 +9,7 @@
 <meta property="og:description" content="Tap a design to try the live demo on your phone.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Hind+Siliguri:wght@400;500;600&family=Yeseva+One&family=Cinzel:wght@600&family=Galada&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri&family=Great+Vibes&family=Hind+Siliguri:wght@400;500;600&family=Yeseva+One&family=Cinzel:wght@600&family=Galada&display=swap" rel="stylesheet">
 <style>
   :root { --bg:#faf5ec; --ink:#2d2418; --muted:#7a6c58; --line:#e7dcc8; --accent:#b48a3c; }
   * { box-sizing:border-box; margin:0; padding:0; }
@@ -47,6 +47,19 @@
   .t-midnight::before { content:""; position:absolute; inset:0; background-image:radial-gradient(1px 1px at 20px 30px,#fff,transparent),radial-gradient(1px 1px at 120px 80px,#fff,transparent),radial-gradient(1.5px 1.5px at 200px 50px,#fff1c9,transparent),radial-gradient(1px 1px at 60px 150px,#fff,transparent); background-size:240px 200px; opacity:.7; }
   .t-midnight .foil { position:relative; width:200px; height:132px; border-radius:12px; overflow:hidden; background:linear-gradient(135deg,#a8802f,#f3d98f 30%,#c9a24f 50%,#fff1c9 72%,#b08835); display:grid; place-items:center; font-family:"Cinzel"; font-size:13px; color:rgba(95,64,15,.8); box-shadow:0 20px 40px -14px #000; }
   .t-midnight .foil::after { content:"15 · 01 · 2027"; position:absolute; left:0; right:0; bottom:0; height:46%; display:grid; place-items:center; background:#13224a; color:#e3c27a; font-size:20px; clip-path:polygon(0 30%, 18% 0, 40% 25%, 62% 0, 84% 28%, 100% 5%, 100% 100%, 0 100%); }
+
+  .t-emerald { background:radial-gradient(ellipse at 50% 20%, #12553f, #0b3d2e 60%, #062419); }
+  .t-emerald .scr { width:190px; display:grid; }
+  .t-emerald .rod { height:14px; border-radius:8px; background:linear-gradient(180deg,#f6e3a6,#c99b3e 40%,#5f430f); margin:0 -8px; box-shadow:0 4px 8px rgba(0,0,0,.4); }
+  .t-emerald .pap { height:120px; background:linear-gradient(90deg,#efe2c2,#f8f0dc 10%,#f8f0dc 90%,#efe2c2); display:grid; place-items:center; text-align:center; color:#0b3d2e; }
+  .t-emerald .pap span { font-family:"Amiri", serif; font-size:16px; direction:rtl; display:block; }
+  .t-emerald .pap b { font-family:"Great Vibes"; font-weight:400; font-size:34px; line-height:1; }
+  .t-lal { background:radial-gradient(circle at 50% 60%, #3a0b0b, #140303 75%); }
+  .t-lal::before, .t-lal::after { content:""; position:absolute; top:0; bottom:0; width:12px; background:radial-gradient(circle,#fff 1.4px,transparent 2px) center/12px 12px repeat-y, linear-gradient(90deg,#d4a13a 0 2px,#a3121c 2px calc(100% - 2px),#d4a13a calc(100% - 2px)); }
+  .t-lal::before { left:0; } .t-lal::after { right:0; }
+  .t-lal .glowy { position:absolute; width:180px; height:180px; border-radius:50%; background:radial-gradient(circle,#ffe7a8 0,rgba(255,170,60,.45) 35%,transparent 70%); }
+  .t-lal .lamp { position:relative; font-size:64px; filter:drop-shadow(0 0 16px rgba(255,180,80,.8)); }
+  .t-lal .sb { position:absolute; bottom:22px; left:0; right:0; text-align:center; font-family:"Hind Siliguri"; font-weight:600; color:#f6d27a; font-size:20px; }
 
   .how { margin-top:44px; background:#fff; border:1px solid var(--line); border-radius:16px; padding:24px 20px; }
   .how h3 { font-size:18px; margin-bottom:12px; }
@@ -91,6 +104,26 @@
         <div class="tags"><span>Luxury</span><span>Navy &amp; gold</span><span>Scratch to reveal</span></div>
         <p>Guests scratch gold foil with a finger to reveal your date. Then a moonlit page with floating lanterns opens.</p>
         <a class="btn" href="templates/midnight-scratch/index.html?to=Guest">View live demo →</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="thumb t-emerald"><div class="scr"><div class="rod"></div><div class="pap"><div><span>بِسْمِ ٱللَّٰهِ</span><b>Rafi &amp; Nusrat</b></div></div><div class="rod"></div></div></div>
+      <div class="body">
+        <h2>Emerald Scroll</h2>
+        <div class="tags"><span>Islamic</span><span>Emerald &amp; gold</span><span>Pull to unroll</span></div>
+        <p>Guests pull down a rolled scroll to open it, like a royal farman. It includes Bismillah, an ayah and a wedding dua. Made for Akdh, Nikah and Walima.</p>
+        <a class="btn" href="templates/emerald-scroll/index.html?to=Guest">View live demo →</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="thumb t-lal"><div class="glowy"></div><div class="lamp">🪔</div><div class="sb">শুভ বিবাহ</div></div>
+      <div class="body">
+        <h2>Lal Paar</h2>
+        <div class="tags"><span>Hindu wedding</span><span>Red &amp; white</span><span>Light the diya</span></div>
+        <p>Guests press and hold to light a diya, and its warm glow opens a red-and-white Lal Paar saree-border card with alpana. Ashirbad, Holud, Bibaho and Bou-bhat.</p>
+        <a class="btn" href="templates/lal-paar/index.html?to=Guest">View live demo →</a>
       </div>
     </article>
   </div>
