@@ -68,7 +68,7 @@
     $("#closing").textContent = t(D.closing);
     $("#sign").textContent = couple();
     $("#hashtag").textContent = D.hashtag || "";
-    $("#brand").textContent = D.brand || "Your Brand";
+    $("#brand").textContent = D.brand || "Shubho Chithi";
     $("#cdLabel").textContent = `${t(main().title)} — ${fmt(main().start, { weekday: "long", day: "numeric", month: "long", year: "numeric" })}`;
 
     const box = $("#events"); box.textContent = "";

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order your card — Shubho Chithi | অর্ডার করুন</title>
+<meta name="description" content="Order your digital wedding invitation from Shubho Chithi. Fill in your details, pay the advance on bKash or Nagad, and get a preview in 24–48 hours.">
+<meta name="theme-color" content="#7a1f2b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='6' y='14' width='52' height='38' rx='5' fill='%237a1f2b'/%3E%3Cpath d='M6 18l26 18 26-18' fill='none' stroke='%23f3e2ac' stroke-width='3'/%3E%3Ccircle cx='32' cy='36' r='8' fill='%23c9a24f'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Great+Vibes&family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=2">
+</head>
+<body class="l-bn">
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="./" aria-label="Shubho Chithi home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="4" y="12" width="56" height="40" rx="6" fill="#7a1f2b"/><path d="M4 17l28 20 28-20" fill="none" stroke="#f3e2ac" stroke-width="3"/><circle cx="32" cy="37" r="9" fill="#c9a24f"/><path d="M28.5 35.5a2.6 2.6 0 0 1 3.5-.2 2.6 2.6 0 0 1 3.5.2 2.4 2.4 0 0 1 0 3.4L32 42.3l-3.5-3.4a2.4 2.4 0 0 1 0-3.4z" fill="#7a1f2b"/></svg>
+      <span><b>শুভ চিঠি</b><small>Shubho Chithi</small></span>
+    </a>
+    <button class="lang" data-lang-toggle style="margin-left:auto">English</button>
+    <a class="btn small wa" data-wa>WhatsApp</a>
+  </div>
+</header>
+
+<main class="order-wrap">
+  <h1><span class="bn">আপনার কার্ড অর্ডার করুন</span><span class="en">Order your card</span></h1>
+  <p class="sub"><span class="bn">৫ মিনিটের ফর্ম। ছবি পরে WhatsApp-এ পাঠাতে পারবেন।</span><span class="en">A 5-minute form. You can send photos later on WhatsApp.</span></p>
+
+  <form id="orderForm" novalidate>
+    <!-- 1. Package & design -->
+    <fieldset>
+      <legend><span class="bn">১. প্যাকেজ ও ডিজাইন</span><span class="en">1. Package & design</span></legend>
+      <div class="opts" role="radiogroup" aria-label="Package">
+        <label class="opt"><input type="radio" name="package" value="basic"><span><b><span class="bn">শুরু</span><span class="en">Basic</span> · <i data-price="basic">৳999</i></b><small><span class="bn">১–২ অনুষ্ঠান</span><span class="en">1–2 events</span></small></span></label>
+        <label class="opt"><input type="radio" name="package" value="popular" checked><span><b><span class="bn">জমকালো</span><span class="en">Popular</span> · <i data-price="popular">৳1,999</i></b><small><span class="bn">৫ অনুষ্ঠান, নামে লিংক, RSVP</span><span class="en">5 events, named links, RSVP</span></small></span></label>
+        <label class="opt"><input type="radio" name="package" value="premium"><span><b><span class="bn">রাজকীয়</span><span class="en">Premium</span> · <i data-price="premium">৳3,999</i>+</b><small><span class="bn">কাস্টম, রিল, নিজস্ব ডোমেইন</span><span class="en">Custom, reel, own domain</span></small></span></label>
+      </div>
+      <label class="f" style="margin-top:12px"><span><span class="bn">ডিজাইন</span><span class="en">Design</span></span>
+        <select name="design" id="design">
+          <option value="royal-envelope">Royal Envelope — Classic ivory &amp; gold</option>
+          <option value="rangila-stories">Rangila Stories — Holud, folk art</option>
+          <option value="midnight-scratch">Midnight Scratch — Luxury navy &amp; gold</option>
+          <option value="emerald-scroll">Emerald Scroll — Akdh / Nikah</option>
+          <option value="lal-paar">Lal Paar — Hindu wedding</option>
+        </select>
+      </label>
+      <a href="#" id="previewDesign" class="try-note" style="display:inline-block"><span class="bn">এই ডিজাইনটি নিজের নামে দেখুন ↗</span><span class="en">Preview this design with my name ↗</span></a>
+      <p class="f" style="margin:14px 0 6px"><span><span class="bn">অ্যাড-অন</span><span class="en">Add-ons</span></span></p>
+      <div class="opts">
+        <label class="opt"><input type="checkbox" name="addon" value="reel"><span><b><span class="bn">ভিডিও রিল</span><span class="en">Video reel</span> · <i data-price="reel">৳500</i></b></span></label>
+        <label class="opt"><input type="checkbox" name="addon" value="extraEvent"><span><b><span class="bn">অতিরিক্ত অনুষ্ঠান</span><span class="en">Extra event</span> · <i data-price="extraEvent">৳300</i></b></span></label>
+        <label class="opt"><input type="checkbox" name="addon" value="qr"><span><b><span class="bn">QR প্রিন্ট</span><span class="en">QR print</span> · <i data-price="qr">৳200</i></b></span></label>
+        <label class="opt"><input type="checkbox" name="addon" value="rush"><span><b><span class="bn">১২ ঘণ্টায় ডেলিভারি</span><span class="en">12-hour rush</span> · <i data-price="rush">৳300</i></b></span></label>
+      </div>
+    </fieldset>
+
+    <!-- 2. Couple -->
+    <fieldset>
+      <legend><span class="bn">২. বর ও কনে</span><span class="en">2. The couple</span></legend>
+      <div class="row2">
+        <label class="f"><span><span class="bn">বরের নাম (English)</span><span class="en">Groom's name (English)</span> *</span><input name="groomEn" required maxlength="60" placeholder="Rafiul Hasan Rafi"></label>
+        <label class="f"><span><span class="bn">বরের নাম (বাংলা)</span><span class="en">Groom's name (Bangla)</span></span><input name="groomBn" maxlength="60" placeholder="রাফিউল হাসান রাফি"></label>
+        <label class="f"><span><span class="bn">কনের নাম (English)</span><span class="en">Bride's name (English)</span> *</span><input name="brideEn" required maxlength="60" placeholder="Nusrat Jahan"></label>
+        <label class="f"><span><span class="bn">কনের নাম (বাংলা)</span><span class="en">Bride's name (Bangla)</span></span><input name="brideBn" maxlength="60" placeholder="নুসরাত জাহান"></label>
+        <label class="f"><span><span class="bn">বরের বাবা-মা</span><span class="en">Groom's parents</span></span><input name="groomParents" maxlength="120" placeholder="Md. Abdul Karim & Rokeya Begum"></label>
+        <label class="f"><span><span class="bn">কনের বাবা-মা</span><span class="en">Bride's parents</span></span><input name="brideParents" maxlength="120" placeholder="Md. Shafiqul Islam & Nasima Akter"></label>
+      </div>
+      <label class="f"><span><span class="bn">ধরন</span><span class="en">Style</span></span>
+        <select name="faith">
+          <option value="muslim">Muslim (Bismillah)</option>
+          <option value="hindu">Hindu (॥ শ্রী শ্রী প্রজাপতয়ে নমঃ ॥)</option>
+          <option value="other">Other / none</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <!-- 3. Events -->
+    <fieldset>
+      <legend><span class="bn">৩. অনুষ্ঠানসমূহ</span><span class="en">3. Events</span></legend>
+      <div id="events"></div>
+      <button type="button" class="btn small ghost" id="addEvent">+ <span class="bn">অনুষ্ঠান যোগ করুন</span><span class="en">Add event</span></button>
+    </fieldset>
+
+    <!-- 4. Card settings -->
+    <fieldset>
+      <legend><span class="bn">৪. কার্ডের সেটিং</span><span class="en">4. Card settings</span></legend>
+      <div class="row2">
+        <label class="f"><span><span class="bn">প্রথমে কোন ভাষায় খুলবে</span><span class="en">Opens first in</span></span>
+          <select name="lang"><option value="bn">বাংলা</option><option value="en">English</option></select></label>
+        <label class="f"><span><span class="bn">RSVP শেষ তারিখ</span><span class="en">RSVP deadline</span> <i>(optional)</i></span><input type="date" name="rsvpDeadline"></label>
+        <label class="f"><span><span class="bn">যোগাযোগ ১ (নাম ও নম্বর)</span><span class="en">Contact 1 (name & number)</span></span><input name="contact1" maxlength="60" placeholder="Karim — 017XXXXXXXX"></label>
+        <label class="f"><span><span class="bn">যোগাযোগ ২</span><span class="en">Contact 2</span></span><input name="contact2" maxlength="60" placeholder="Shafiq — 018XXXXXXXX"></label>
+        <label class="f"><span><span class="bn">হ্যাশট্যাগ</span><span class="en">Hashtag</span> <i>(optional)</i></span><input name="hashtag" maxlength="40" placeholder="#RafiWedsNusrat"></label>
+        <label class="f"><span><span class="bn">মিউজিক</span><span class="en">Music</span></span>
+          <select name="music"><option value="soft">Soft instrumental</option><option value="none">No music</option><option value="own">I'll send my own</option></select></label>
+      </div>
+      <label class="f"><span><span class="bn">বিশেষ অনুরোধ</span><span class="en">Special requests</span> <i>(optional)</i></span><textarea name="notes" rows="3" maxlength="500" data-ph-bn="রং, ডিজাইন, ড্রেস কোড, যা চান লিখুন…" data-ph-en="Colours, dress code, anything you want…"></textarea></label>
+      <p class="try-note">📸 <span class="bn">ছবি (ঐচ্ছিক) অর্ডারের পর WhatsApp-এ পাঠান।</span><span class="en">Send photos (optional) on WhatsApp after ordering.</span></p>
+    </fieldset>
+
+    <!-- 5. You -->
+    <fieldset>
+      <legend><span class="bn">৫. আপনার তথ্য</span><span class="en">5. Your details</span></legend>
+      <div class="row2">
+        <label class="f"><span><span class="bn">আপনার নাম</span><span class="en">Your name</span> *</span><input name="custName" required maxlength="60" autocomplete="name"></label>
+        <label class="f"><span><span class="bn">WhatsApp নম্বর</span><span class="en">WhatsApp number</span> *</span><input name="custPhone" required maxlength="20" inputmode="tel" autocomplete="tel" placeholder="01XXXXXXXXX"></label>
+      </div>
+    </fieldset>
+
+    <!-- 6. Payment -->
+    <fieldset>
+      <legend><span class="bn">৬. অগ্রিম পেমেন্ট</span><span class="en">6. Advance payment</span></legend>
+      <div class="total"><span><span class="bn">মোট</span><span class="en">Total</span></span><b id="total">৳1,999</b></div>
+      <div class="pay-box" style="margin-top:12px">
+        <span class="bn">এখন <b data-advance>৳৫০০</b> অগ্রিম পাঠান (ডিজাইন শুরুর আগে ফেরতযোগ্য)। প্রিভিউ পছন্দ হলে বাকি টাকা।</span>
+        <span class="en">Send a <b data-advance>৳500</b> advance now (refundable until design work starts). Pay the rest after you approve the preview.</span>
+        <div id="payNumbers" style="margin-top:8px"></div>
+      </div>
+      <div class="row2">
+        <label class="f"><span><span class="bn">পেমেন্ট মাধ্যম</span><span class="en">Paid with</span></span>
+          <select name="payMethod"><option>bKash</option><option>Nagad</option></select></label>
+        <label class="f"><span><span class="bn">ট্রানজেকশন আইডি (TrxID)</span><span class="en">Transaction ID (TrxID)</span> *</span><input name="trxId" required maxlength="20" autocomplete="off" placeholder="8N7A6B5C4D"></label>
+      </div>
+    </fieldset>
+
+    <p class="err" id="err" role="alert"></p>
+    <button class="btn" type="submit" style="width:100%"><span class="bn">অর্ডার পাঠান (WhatsApp)</span><span class="en">Send order (WhatsApp)</span></button>
+  </form>
+
+  <div class="done-box" id="done" hidden>
+    <h2><span class="bn">ধন্যবাদ! অর্ডার পেয়েছি 💌</span><span class="en">Thank you! Order received 💌</span></h2>
+    <p style="margin:8px 0">Order ID: <b id="orderId"></b></p>
+    <p class="try-note"><span class="bn">WhatsApp খুলে গেলে মেসেজটি সেন্ড করুন। না খুললে নিচের বাটনে চাপুন। আমরা ২৪–৪৮ ঘণ্টায় প্রিভিউ পাঠাব।</span><span class="en">If WhatsApp opened, press send there. If not, use the button below. We'll send your preview within 24–48 hours.</span></p>
+    <a class="btn wa" id="waAgain" target="_blank" rel="noopener" style="margin-top:12px"><span class="bn">WhatsApp-এ পাঠান</span><span class="en">Send on WhatsApp</span></a>
+  </div>
+</main>
+
+<footer><div class="wrap"><div>© <span data-year>2026</span> Shubho Chithi · শুভ চিঠি</div><nav><a href="./"><span class="bn">হোম</span><span class="en">Home</span></a></nav></div></footer>
+
+<template id="eventTpl">
+  <div class="event-box">
+    <button type="button" class="rm" aria-label="Remove event">✕</button>
+    <div class="row2">
+      <label class="f"><span><span class="bn">অনুষ্ঠান</span><span class="en">Event</span> *</span>
+        <input name="evTitle" list="evNames" maxlength="40" required placeholder="Gaye Holud / বিয়ে / Walima"></label>
+      <label class="f"><span><span class="bn">তারিখ</span><span class="en">Date</span> *</span><input type="date" name="evDate" required></label>
+      <label class="f"><span><span class="bn">সময়</span><span class="en">Time</span></span><input type="time" name="evTime" value="19:00"></label>
+      <label class="f"><span><span class="bn">ভেন্যু</span><span class="en">Venue</span> *</span><input name="evVenue" maxlength="80" required placeholder="Nakshi Convention Hall"></label>
+      <label class="f"><span><span class="bn">ঠিকানা</span><span class="en">Address</span></span><input name="evAddress" maxlength="80" placeholder="Mirpur 10, Dhaka"></label>
+      <label class="f"><span>Google Maps <span class="bn">লিংক</span><span class="en">link</span> <i>(optional)</i></span><input type="url" name="evMap" maxlength="300" placeholder="https://maps.app.goo.gl/…"></label>
+    </div>
+  </div>
+</template>
+<datalist id="evNames">
+  <option value="Gaye Holud"><option value="Akdh"><option value="Wedding Ceremony"><option value="Walima"><option value="Reception">
+  <option value="Bou-bhat"><option value="Mehendi"><option value="Engagement"><option value="Ashirbad"><option value="Shubho Bibaho">
+</datalist>
+
+<script src="site-config.js?v=1"></script>
+<script src="assets/site.js?v=1"></script>
+<script src="assets/order.js?v=1"></script>
+</body>
+</html>

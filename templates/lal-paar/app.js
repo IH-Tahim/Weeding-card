@@ -57,7 +57,7 @@
     $("#closing").textContent = t(D.closing);
     $("#sign").textContent = couple();
     $("#hashtag").textContent = D.hashtag || "";
-    $("#brand").textContent = D.brand || "Your Brand";
+    $("#brand").textContent = D.brand || "Shubho Chithi";
     $("#cdTitle").textContent = t(main().title);
 
     const box = $("#events"); box.textContent = "";

@@ -7,7 +7,7 @@
   ======================================================
 */
 window.INVITE = {
-  brand: "Your Brand",          // your business name (shown in the footer)
+  brand: "Shubho Chithi",       // your business name (shown in the footer)
   defaultLang: "bn",            // "en" or "bn"
   monogram: "A&P",
   hashtag: "#ArnabWedsPriyanka",

@@ -171,7 +171,7 @@
         h("p", { class: "kicker", text: s("call") }),
         D.contacts.map((p) => h("a", { href: "tel:" + p.phone.replace(/[^\d+]/g, "") }, h("span", { text: t(p.name) }), h("b", { text: p.phone })))) : null,
       h("button", { class: "btn alt pop", i: 6, id: "againBtn", style: "margin-top:16px", text: s("again") }),
-      pop(7, "p", "credit", `Made with ♥ by ${D.brand || "Your Brand"}`)
+      pop(7, "p", "credit", `Made with ♥ by ${D.brand || "Shubho Chithi"}`)
     ), true);
 
     const host = $("#slides"); host.textContent = ""; list.forEach((x) => host.append(x.el));

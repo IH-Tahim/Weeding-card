@@ -84,7 +84,7 @@
     $("#closing").textContent = t(D.closing);
     $("#signoff").textContent = `${t(D.groom.short)} & ${t(D.bride.short)}`;
     $("#hashtag").textContent = D.hashtag || "";
-    $("#brand").textContent = D.brand || "Your Brand";
+    $("#brand").textContent = D.brand || "Shubho Chithi";
 
     const main = D.events[D.countdownEvent] || D.events[0];
     $("#heroDate").textContent = fmt(main.start, { day: "2-digit", month: "2-digit", year: "numeric" }).replace(/\//g, " · ");

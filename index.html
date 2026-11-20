@@ -1,144 +1,299 @@
 <!doctype html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Digital Wedding Invitations</title>
-<meta name="description" content="Animated digital wedding invitation websites for Bangladesh — one link, every guest by name, English & Bangla.">
-<meta property="og:title" content="Digital Wedding Invitations 💌">
-<meta property="og:description" content="Tap a design to try the live demo on your phone.">
+<title>Shubho Chithi — Digital Wedding Invitation Cards in Bangladesh | শুভ চিঠি</title>
+<meta name="description" content="Animated digital wedding invitation cards for Bangladesh. One link for every event, every guest by name, Bangla & English, Google Maps, countdown and RSVP. From ৳999, ready in 24–48 hours.">
+<meta property="og:title" content="শুভ চিঠি — একটি লিংকেই পুরো বিয়ের দাওয়াত">
+<meta property="og:description" content="Animated digital wedding cards · every guest by name · Bangla & English · from ৳999">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shubhochithi.com/">
+<meta name="theme-color" content="#7a1f2b">
+<link rel="canonical" href="https://shubhochithi.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='6' y='14' width='52' height='38' rx='5' fill='%237a1f2b'/%3E%3Cpath d='M6 18l26 18 26-18' fill='none' stroke='%23f3e2ac' stroke-width='3'/%3E%3Ccircle cx='32' cy='36' r='8' fill='%23c9a24f'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri&family=Great+Vibes&family=Hind+Siliguri:wght@400;500;600&family=Yeseva+One&family=Cinzel:wght@600&family=Galada&display=swap" rel="stylesheet">
-<style>
-  :root { --bg:#faf5ec; --ink:#2d2418; --muted:#7a6c58; --line:#e7dcc8; --accent:#b48a3c; }
-  * { box-sizing:border-box; margin:0; padding:0; }
-  body { background:var(--bg); color:var(--ink); font:16px/1.55 "Hind Siliguri", system-ui, sans-serif; }
-  .wrap { max-width:1040px; margin:0 auto; padding:40px 16px 60px; }
-  header { text-align:center; margin-bottom:34px; }
-  .kicker { font-size:12px; letter-spacing:.3em; text-transform:uppercase; color:var(--accent); font-weight:600; }
-  h1 { font-family:"Great Vibes", cursive; font-weight:400; font-size:clamp(44px, 10vw, 64px); color:var(--accent); line-height:1.1; margin:6px 0; }
-  header p { color:var(--muted); max-width:52ch; margin:0 auto; }
-  .bn { font-size:15px; margin-top:4px; }
-  .grid { display:grid; gap:20px; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); }
-  .card { background:#fff; border:1px solid var(--line); border-radius:16px; overflow:hidden; display:flex; flex-direction:column; box-shadow:0 10px 30px -18px rgba(60,40,10,.35); transition:transform .2s; }
-  .card:hover { transform:translateY(-3px); }
-  .thumb { height:230px; display:grid; place-items:center; position:relative; overflow:hidden; }
-  .body { padding:18px 18px 20px; display:flex; flex-direction:column; gap:8px; flex:1; }
-  .body h2 { font-size:20px; }
-  .tags { display:flex; gap:6px; flex-wrap:wrap; }
-  .tags span { font-size:12px; padding:2px 10px; border-radius:99px; background:#f4ecdc; color:#6b5532; }
-  .body p { color:var(--muted); font-size:15px; flex:1; }
-  .btn { align-self:flex-start; margin-top:6px; padding:10px 18px; border-radius:99px; text-decoration:none; font-weight:600; font-size:15px; color:#fff; background:var(--accent); }
-
-  /* thumbnails drawn in CSS */
-  .t-royal { background:radial-gradient(circle, #fffaf0, #efe2c6); }
-  .t-royal .env { width:190px; height:126px; position:relative; border-radius:6px; background:linear-gradient(170deg,#fdf8ee,#f2e6cf); box-shadow:0 18px 30px -14px rgba(90,64,20,.5); }
-  .t-royal .env::before { content:""; position:absolute; inset:0; clip-path:polygon(0 0,100% 0,50% 60%); background:linear-gradient(180deg,#fffaf0,#e9dbbb); }
-  .t-royal .seal { position:absolute; left:50%; top:60%; width:46px; height:46px; margin:-23px 0 0 -23px; border-radius:50%; background:radial-gradient(circle at 35% 30%, #f6dd9b, #d9b56a 35%, #b48a3c 65%, #8c6623); display:grid; place-items:center; color:#fff8e6; font-family:"Great Vibes"; font-size:18px; }
-  .t-rangila { background:linear-gradient(170deg,#e91e63,#9c0d42); color:#fff6e0; text-align:center; }
-  .t-rangila::before { content:""; position:absolute; top:0; left:0; right:0; height:22px; background:repeating-linear-gradient(90deg,#ffd54f 0 18px,#2e9e4f 18px 36px,#1e4fa8 36px 54px,#f9a825 54px 72px); clip-path:polygon(0 0,100% 0,100% 40%,97% 100%,94% 40%,91% 100%,88% 40%,85% 100%,82% 40%,79% 100%,76% 40%,73% 100%,70% 40%,67% 100%,64% 40%,61% 100%,58% 40%,55% 100%,52% 40%,49% 100%,46% 40%,43% 100%,40% 40%,37% 100%,34% 40%,31% 100%,28% 40%,25% 100%,22% 40%,19% 100%,16% 40%,13% 100%,10% 40%,7% 100%,4% 40%,1% 100%,0 40%); }
-  .t-rangila b { display:block; font-family:"Yeseva One"; font-weight:400; font-size:40px; line-height:1; }
-  .t-rangila i { display:inline-block; margin:6px 0; padding:2px 14px; border-radius:99px; background:#ffd54f; color:#3a1a0e; font-style:normal; font-weight:700; transform:rotate(-4deg); }
-  .t-rangila .bars { position:absolute; top:30px; left:16px; right:16px; display:flex; gap:4px; }
-  .t-rangila .bars span { flex:1; height:3px; border-radius:3px; background:rgba(255,255,255,.4); }
-  .t-rangila .bars span:first-child { background:#fff; }
-  .t-midnight { background:radial-gradient(ellipse at 50% 0%, #1c2f60, #0b1530 70%); }
-  .t-midnight::before { content:""; position:absolute; inset:0; background-image:radial-gradient(1px 1px at 20px 30px,#fff,transparent),radial-gradient(1px 1px at 120px 80px,#fff,transparent),radial-gradient(1.5px 1.5px at 200px 50px,#fff1c9,transparent),radial-gradient(1px 1px at 60px 150px,#fff,transparent); background-size:240px 200px; opacity:.7; }
-  .t-midnight .foil { position:relative; width:200px; height:132px; border-radius:12px; overflow:hidden; background:linear-gradient(135deg,#a8802f,#f3d98f 30%,#c9a24f 50%,#fff1c9 72%,#b08835); display:grid; place-items:center; font-family:"Cinzel"; font-size:13px; color:rgba(95,64,15,.8); box-shadow:0 20px 40px -14px #000; }
-  .t-midnight .foil::after { content:"15 · 01 · 2027"; position:absolute; left:0; right:0; bottom:0; height:46%; display:grid; place-items:center; background:#13224a; color:#e3c27a; font-size:20px; clip-path:polygon(0 30%, 18% 0, 40% 25%, 62% 0, 84% 28%, 100% 5%, 100% 100%, 0 100%); }
-
-  .t-emerald { background:radial-gradient(ellipse at 50% 20%, #12553f, #0b3d2e 60%, #062419); }
-  .t-emerald .scr { width:190px; display:grid; }
-  .t-emerald .rod { height:14px; border-radius:8px; background:linear-gradient(180deg,#f6e3a6,#c99b3e 40%,#5f430f); margin:0 -8px; box-shadow:0 4px 8px rgba(0,0,0,.4); }
-  .t-emerald .pap { height:120px; background:linear-gradient(90deg,#efe2c2,#f8f0dc 10%,#f8f0dc 90%,#efe2c2); display:grid; place-items:center; text-align:center; color:#0b3d2e; }
-  .t-emerald .pap span { font-family:"Amiri", serif; font-size:16px; direction:rtl; display:block; }
-  .t-emerald .pap b { font-family:"Great Vibes"; font-weight:400; font-size:34px; line-height:1; }
-  .t-lal { background:radial-gradient(circle at 50% 60%, #3a0b0b, #140303 75%); }
-  .t-lal::before, .t-lal::after { content:""; position:absolute; top:0; bottom:0; width:12px; background:radial-gradient(circle,#fff 1.4px,transparent 2px) center/12px 12px repeat-y, linear-gradient(90deg,#d4a13a 0 2px,#a3121c 2px calc(100% - 2px),#d4a13a calc(100% - 2px)); }
-  .t-lal::before { left:0; } .t-lal::after { right:0; }
-  .t-lal .glowy { position:absolute; width:180px; height:180px; border-radius:50%; background:radial-gradient(circle,#ffe7a8 0,rgba(255,170,60,.45) 35%,transparent 70%); }
-  .t-lal .lamp { position:relative; font-size:64px; filter:drop-shadow(0 0 16px rgba(255,180,80,.8)); }
-  .t-lal .sb { position:absolute; bottom:22px; left:0; right:0; text-align:center; font-family:"Hind Siliguri"; font-weight:600; color:#f6d27a; font-size:20px; }
-
-  .how { margin-top:44px; background:#fff; border:1px solid var(--line); border-radius:16px; padding:24px 20px; }
-  .how h3 { font-size:18px; margin-bottom:12px; }
-  .how ol { padding-left:20px; display:grid; gap:6px; color:var(--muted); }
-  footer { text-align:center; color:var(--muted); font-size:13px; margin-top:30px; }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Amiri&family=Cinzel:wght@600&family=Cormorant+Garamond:wght@500;600&family=Great+Vibes&family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@600;800&family=Yeseva+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=2">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Shubho Chithi","alternateName":"শুভ চিঠি","url":"https://shubhochithi.com/","description":"Animated digital wedding invitation cards for Bangladesh.","areaServed":"BD","priceRange":"৳999–৳3999"}
+</script>
 </head>
-<body>
-<div class="wrap">
-  <header>
-    <p class="kicker">Digital wedding invitations</p>
-    <h1>One link. Every guest by name.</h1>
-    <p>Animated invitation websites for Bangladeshi weddings. Holud, Akdh, Biye and Walima in one link, in English & বাংলা, with maps, a countdown and RSVP.</p>
-    <p class="bn">একটি লিংকেই পুরো বিয়ের দাওয়াত — প্রতিটি অতিথির নামে আলাদা লিংক।</p>
-  </header>
+<body class="l-bn">
 
-  <div class="grid">
-    <article class="card">
-      <div class="thumb t-royal"><div class="env"><div class="seal">R&amp;N</div></div></div>
-      <div class="body">
-        <h2>Royal Envelope</h2>
-        <div class="tags"><span>Classic</span><span>Ivory &amp; gold</span><span>Scroll</span></div>
-        <p>The guest taps a gold wax seal, the envelope opens and the letter rises. An elegant, timeless look.</p>
-        <a class="btn" href="templates/royal-envelope/index.html?to=Guest">View live demo →</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="thumb t-rangila"><div class="bars"><span></span><span></span><span></span><span></span><span></span></div><div><b>Rafi</b><i>weds</i><b>Nusrat</b></div></div>
-      <div class="body">
-        <h2>Rangila Stories</h2>
-        <div class="tags"><span>Fun &amp; colourful</span><span>Bangla folk art</span><span>Story slides</span></div>
-        <p>Painted doors swing open, then the invitation plays like Instagram stories, one tap per page. Perfect for Gaye Holud.</p>
-        <a class="btn" href="templates/rangila-stories/index.html?to=Guest">View live demo →</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="thumb t-midnight"><div class="foil">✦ SCRATCH HERE ✦</div></div>
-      <div class="body">
-        <h2>Midnight Scratch</h2>
-        <div class="tags"><span>Luxury</span><span>Navy &amp; gold</span><span>Scratch to reveal</span></div>
-        <p>Guests scratch gold foil with a finger to reveal your date. Then a moonlit page with floating lanterns opens.</p>
-        <a class="btn" href="templates/midnight-scratch/index.html?to=Guest">View live demo →</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="thumb t-emerald"><div class="scr"><div class="rod"></div><div class="pap"><div><span>بِسْمِ ٱللَّٰهِ</span><b>Rafi &amp; Nusrat</b></div></div><div class="rod"></div></div></div>
-      <div class="body">
-        <h2>Emerald Scroll</h2>
-        <div class="tags"><span>Islamic</span><span>Emerald &amp; gold</span><span>Pull to unroll</span></div>
-        <p>Guests pull down a rolled scroll to open it, like a royal farman. It includes Bismillah, an ayah and a wedding dua. Made for Akdh, Nikah and Walima.</p>
-        <a class="btn" href="templates/emerald-scroll/index.html?to=Guest">View live demo →</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="thumb t-lal"><div class="glowy"></div><div class="lamp">🪔</div><div class="sb">শুভ বিবাহ</div></div>
-      <div class="body">
-        <h2>Lal Paar</h2>
-        <div class="tags"><span>Hindu wedding</span><span>Red &amp; white</span><span>Light the diya</span></div>
-        <p>Guests press and hold to light a diya, and its warm glow opens a red-and-white Lal Paar saree-border card with alpana. Ashirbad, Holud, Bibaho and Bou-bhat.</p>
-        <a class="btn" href="templates/lal-paar/index.html?to=Guest">View live demo →</a>
-      </div>
-    </article>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="./" aria-label="Shubho Chithi home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="4" y="12" width="56" height="40" rx="6" fill="#7a1f2b"/><path d="M4 17l28 20 28-20" fill="none" stroke="#f3e2ac" stroke-width="3"/><circle cx="32" cy="37" r="9" fill="#c9a24f"/><path d="M28.5 35.5a2.6 2.6 0 0 1 3.5-.2 2.6 2.6 0 0 1 3.5.2 2.4 2.4 0 0 1 0 3.4L32 42.3l-3.5-3.4a2.4 2.4 0 0 1 0-3.4z" fill="#7a1f2b"/></svg>
+      <span><b>শুভ চিঠি</b><small>Shubho Chithi</small></span>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#designs"><span class="bn">ডিজাইন</span><span class="en">Designs</span></a>
+      <a href="#how"><span class="bn">কীভাবে</span><span class="en">How it works</span></a>
+      <a href="#pricing"><span class="bn">দাম</span><span class="en">Pricing</span></a>
+      <a href="#faq"><span class="bn">প্রশ্ন</span><span class="en">FAQ</span></a>
+    </nav>
+    <button class="lang" data-lang-toggle>English</button>
+    <a class="btn small order-btn" href="order.html"><span class="bn">অর্ডার</span><span class="en">Order</span></a>
   </div>
+</header>
 
-  <section class="how">
-    <h3>Every design includes</h3>
-    <ol>
-      <li>A personal link for each guest: "Dear Tahim…"</li>
-      <li>English and বাংলা with one tap</li>
-      <li>All your events with Google Maps directions and "Add to calendar"</li>
-      <li>A live countdown, a photo gallery and background music</li>
-      <li>RSVP straight to a Google Sheet or WhatsApp</li>
-    </ol>
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="kicker"><span class="bn">ডিজিটাল বিয়ের কার্ড · বাংলাদেশ</span><span class="en">Digital wedding cards · Bangladesh</span></span>
+        <h1>
+          <span class="bn">একটি লিংকেই পুরো <em>বিয়ের দাওয়াত</em></span>
+          <span class="en">One link. <em>Every guest by name.</em></span>
+        </h1>
+        <p class="lead">
+          <span class="bn">হলুদ, আকদ, বিয়ে, বৌভাত — সব অনুষ্ঠান এক লিংকে। প্রতিটি অতিথির নামে আলাদা লিংক, ম্যাপ, কাউন্টডাউন আর RSVP। WhatsApp-এ পাঠান, কাগজের কার্ডের ঝামেলা ছাড়াই।</span>
+          <span class="en">Holud, Akdh, Biye and Bou-bhat in one beautiful animated link. Every guest gets their own named link, with maps, a countdown and RSVP. Send it on WhatsApp, with no printing and no delivery hassle.</span>
+        </p>
+        <div class="try">
+          <input id="tryName" maxlength="30" autocomplete="off" data-ph-bn="আপনার নাম লিখুন…" data-ph-en="Type your name…" aria-label="Your name">
+          <button class="btn gold" id="tryBtn" data-try=""><span class="bn">নিজের নামে দেখুন ✨</span><span class="en">See it with my name ✨</span></button>
+        </div>
+        <p class="try-note"><span class="bn">নাম লিখলেই পাশের ফোনে কার্ড আপনার নাম ধরে ডাকবে।</span><span class="en">Type a name and the card in the phone greets you by name.</span></p>
+        <div class="hero-cta">
+          <a class="btn" href="order.html"><span class="bn">এখনই অর্ডার করুন</span><span class="en">Order now</span></a>
+          <a class="btn wa" data-wa><span class="bn">WhatsApp-এ কথা বলুন</span><span class="en">Chat on WhatsApp</span></a>
+        </div>
+        <div class="ticks">
+          <span class="bn">৳৯৯৯ থেকে শুরু</span><span class="en">From ৳999</span>
+          <span class="bn">২৪–৪৮ ঘণ্টায় ডেলিভারি</span><span class="en">Ready in 24–48 hours</span>
+          <span class="bn">বিকাশ / নগদ</span><span class="en">bKash / Nagad</span>
+        </div>
+      </div>
+      <div>
+        <div class="phone"><div class="screen"><iframe id="demoFrame" title="Live invitation demo" loading="lazy"></iframe></div></div>
+        <div class="phone-switch" aria-label="Choose a demo design">
+          <button data-demo="royal-envelope" aria-label="Royal Envelope"></button>
+          <button data-demo="rangila-stories" aria-label="Rangila Stories"></button>
+          <button data-demo="midnight-scratch" aria-label="Midnight Scratch"></button>
+          <button data-demo="emerald-scroll" aria-label="Emerald Scroll"></button>
+          <button data-demo="lal-paar" aria-label="Lal Paar"></button>
+        </div>
+      </div>
+    </div>
   </section>
-  <footer>Try a demo with your own name: add <code>?to=YourName</code> to the link.</footer>
-</div>
+
+  <!-- Features -->
+  <section class="block alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2><span class="bn">প্রতিটি কার্ডে যা যা থাকছে</span><span class="en">Included in every card</span></h2>
+      </div>
+      <div class="features">
+        <div class="feature"><div class="ic">💌</div><h3><span class="bn">অতিথির নামে লিংক</span><span class="en">A link for every guest</span></h3><p><span class="bn">"প্রিয় রহিম চাচা…" — প্রত্যেকে নিজের নামে দাওয়াত পাবেন।</span><span class="en">"Dear Rahim Chacha…" Every guest is invited by name.</span></p></div>
+        <div class="feature"><div class="ic">🎬</div><h3><span class="bn">অ্যানিমেটেড ওপেনিং</span><span class="en">Animated opening</span></h3><p><span class="bn">খাম খোলা, দরজা খোলা, স্ক্র্যাচ কার্ড, প্রদীপ জ্বালানো।</span><span class="en">Open an envelope or doors, scratch gold foil, or light a diya.</span></p></div>
+        <div class="feature"><div class="ic">🗺️</div><h3><span class="bn">ম্যাপ ও ক্যালেন্ডার</span><span class="en">Maps & calendar</span></h3><p><span class="bn">এক চাপে ভেন্যুর লোকেশন আর ক্যালেন্ডারে তারিখ সেভ।</span><span class="en">Venue directions and "save the date" in one tap.</span></p></div>
+        <div class="feature"><div class="ic">✅</div><h3>RSVP</h3><p><span class="bn">কে আসছেন, কতজন — সরাসরি আপনার Google Sheet বা WhatsApp-এ।</span><span class="en">See who's coming and how many, straight to your Google Sheet or WhatsApp.</span></p></div>
+        <div class="feature"><div class="ic">🇧🇩</div><h3><span class="bn">বাংলা ও English</span><span class="en">Bangla & English</span></h3><p><span class="bn">এক চাপে ভাষা বদল — মুরুব্বি থেকে প্রবাসী সবার জন্য।</span><span class="en">Switch language in one tap, so it works for elders and relatives abroad.</span></p></div>
+        <div class="feature"><div class="ic">⏳</div><h3><span class="bn">কাউন্টডাউন ও গান</span><span class="en">Countdown & music</span></h3><p><span class="bn">বিয়ের দিন পর্যন্ত লাইভ কাউন্টডাউন, ব্যাকগ্রাউন্ড মিউজিক।</span><span class="en">A live countdown to the big day, with soft background music.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Designs -->
+  <section class="block" id="designs">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2><span class="bn">ডিজাইন বেছে নিন</span><span class="en">Choose your design</span></h2>
+        <p><span class="bn">প্রতিটি ডিজাইন নিজের নামে চালিয়ে দেখুন।</span><span class="en">Try any design with your own name.</span></p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="thumb t-royal"><div class="env"><div class="seal">R&amp;N</div></div></div>
+          <div class="body">
+            <h3>Royal Envelope</h3>
+            <div class="tags"><span>Classic</span><span>Ivory &amp; gold</span></div>
+            <p><span class="bn">সোনালি সিলে চাপ দিলে খাম খোলে, চিঠি উঠে আসে। ক্লাসিক ও রুচিশীল।</span><span class="en">Tap the gold wax seal, the envelope opens and the letter rises. Classic and elegant.</span></p>
+            <div class="acts"><button class="btn small" data-try="royal-envelope"><span class="bn">নিজের নামে দেখুন</span><span class="en">Try with my name</span></button><a class="btn small ghost" href="order.html?design=royal-envelope"><span class="bn">অর্ডার</span><span class="en">Order</span></a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb t-rangila"><div class="bars"><span></span><span></span><span></span><span></span></div><div><b>Rafi</b><i>weds</i><b>Nusrat</b></div></div>
+          <div class="body">
+            <h3>Rangila Stories</h3>
+            <div class="tags"><span>Holud</span><span>Folk art</span><span>Stories</span></div>
+            <p><span class="bn">রিকশা-আর্টের দরজা খুলে ইনস্টাগ্রাম স্টোরির মতো স্লাইড। গায়ে হলুদের জন্য দারুণ।</span><span class="en">Rickshaw-art doors open into Instagram-style story slides. Perfect for Gaye Holud.</span></p>
+            <div class="acts"><button class="btn small" data-try="rangila-stories"><span class="bn">নিজের নামে দেখুন</span><span class="en">Try with my name</span></button><a class="btn small ghost" href="order.html?design=rangila-stories"><span class="bn">অর্ডার</span><span class="en">Order</span></a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb t-midnight"><div class="foil">✦ SCRATCH HERE ✦</div></div>
+          <div class="body">
+            <h3>Midnight Scratch</h3>
+            <div class="tags"><span>Luxury</span><span>Navy &amp; gold</span></div>
+            <p><span class="bn">আঙুল দিয়ে সোনালি পর্দা ঘষলে বেরিয়ে আসে তারিখ। তারপর চাঁদের আলো আর ফানুস।</span><span class="en">Scratch the gold foil to reveal the date, then a moonlit page with floating lanterns.</span></p>
+            <div class="acts"><button class="btn small" data-try="midnight-scratch"><span class="bn">নিজের নামে দেখুন</span><span class="en">Try with my name</span></button><a class="btn small ghost" href="order.html?design=midnight-scratch"><span class="bn">অর্ডার</span><span class="en">Order</span></a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb t-emerald"><div class="scr"><div class="rod"></div><div class="pap"><div><span>بِسْمِ ٱللَّٰهِ</span><b>Rafi &amp; Nusrat</b></div></div><div class="rod"></div></div></div>
+          <div class="body">
+            <h3>Emerald Scroll</h3>
+            <div class="tags"><span>Akdh / Nikah</span><span>Emerald &amp; gold</span></div>
+            <p><span class="bn">নিচে টানলে খুলে যায় রাজকীয় স্ক্রল — বিসমিল্লাহ, আয়াত ও বিয়ের দোয়াসহ।</span><span class="en">Pull down to unroll a royal scroll with Bismillah, an ayah and the wedding dua.</span></p>
+            <div class="acts"><button class="btn small" data-try="emerald-scroll"><span class="bn">নিজের নামে দেখুন</span><span class="en">Try with my name</span></button><a class="btn small ghost" href="order.html?design=emerald-scroll"><span class="bn">অর্ডার</span><span class="en">Order</span></a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb t-lal"><div class="glowy"></div><div class="lamp">🪔</div><div class="sb">শুভ বিবাহ</div></div>
+          <div class="body">
+            <h3>Lal Paar</h3>
+            <div class="tags"><span>Hindu wedding</span><span>Red &amp; white</span></div>
+            <p><span class="bn">প্রদীপ জ্বালালেই খুলে যায় লালপাড় শাড়ির নকশার কার্ড — আশীর্বাদ থেকে বৌভাত।</span><span class="en">Light the diya to open a red-and-white Lal Paar card, from Ashirbad to Bou-bhat.</span></p>
+            <div class="acts"><button class="btn small" data-try="lal-paar"><span class="bn">নিজের নামে দেখুন</span><span class="en">Try with my name</span></button><a class="btn small ghost" href="order.html?design=lal-paar"><span class="bn">অর্ডার</span><span class="en">Order</span></a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="block alt" id="how">
+    <div class="wrap">
+      <div class="sec-head"><h2><span class="bn">কীভাবে অর্ডার করবেন</span><span class="en">How it works</span></h2></div>
+      <div class="steps">
+        <div class="step"><h3><span class="bn">ডিজাইন ও প্যাকেজ বাছুন</span><span class="en">Pick a design & package</span></h3><p><span class="bn">যেকোনো ডিজাইন নিজের নামে দেখে পছন্দ করুন।</span><span class="en">Try the designs with your name and pick one.</span></p></div>
+        <div class="step"><h3><span class="bn">তথ্য দিন ও অগ্রিম পাঠান</span><span class="en">Send details & advance</span></h3><p><span class="bn">অর্ডার ফর্মে নাম, তারিখ, ভেন্যু দিন। বিকাশ/নগদে <b data-advance>৳৫০০</b> অগ্রিম।</span><span class="en">Fill in names, dates and venues, and pay a <b data-advance>৳500</b> advance on bKash/Nagad.</span></p></div>
+        <div class="step"><h3><span class="bn">প্রিভিউ দেখুন</span><span class="en">Check your preview</span></h3><p><span class="bn">২৪–৪৮ ঘণ্টায় প্রিভিউ লিংক। ২ বার পর্যন্ত ফ্রি সংশোধন।</span><span class="en">A preview link in 24–48 hours, with up to 2 free changes.</span></p></div>
+        <div class="step"><h3><span class="bn">সবাইকে পাঠান</span><span class="en">Send it to everyone</span></h3><p><span class="bn">বাকি টাকা দিয়ে কার্ড লাইভ। অতিথিদের নামে লিংক বানিয়ে WhatsApp-এ পাঠান।</span><span class="en">Pay the balance and your card goes live. Make named links and send them on WhatsApp.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="block" id="pricing">
+    <div class="wrap">
+      <div class="sec-head"><h2><span class="bn">প্যাকেজ ও দাম</span><span class="en">Packages & pricing</span></h2><p><span class="bn">একবার পেমেন্ট — কোনো মাসিক চার্জ নেই।</span><span class="en">Pay once. No monthly fees.</span></p></div>
+      <div class="prices">
+        <div class="price">
+          <h3><span class="bn">শুরু</span><span class="en">Basic</span></h3>
+          <div class="amt" data-price="basic">৳999</div>
+          <ul>
+            <li><span class="bn">১–২টি অনুষ্ঠান</span><span class="en">1–2 events</span></li>
+            <li><span class="bn">রেডি ডিজাইন, অ্যানিমেশন ও গান</span><span class="en">Ready design, animation & music</span></li>
+            <li><span class="bn">ম্যাপ, কাউন্টডাউন, ক্যালেন্ডার</span><span class="en">Maps, countdown, calendar</span></li>
+            <li><span class="bn">বাংলা ও English</span><span class="en">Bangla & English</span></li>
+            <li><span class="bn">৪৮ ঘণ্টায় ডেলিভারি · ৬ মাস অনলাইন</span><span class="en">48-hour delivery · online for 6 months</span></li>
+          </ul>
+          <a class="btn ghost" href="order.html?package=basic"><span class="bn">বেছে নিন</span><span class="en">Choose</span></a>
+        </div>
+        <div class="price hot">
+          <span class="badge"><span class="bn">সবচেয়ে জনপ্রিয়</span><span class="en">Most popular</span></span>
+          <h3><span class="bn">জমকালো</span><span class="en">Popular</span></h3>
+          <div class="amt" data-price="popular">৳1,999</div>
+          <ul>
+            <li><span class="bn">৫টি পর্যন্ত অনুষ্ঠান</span><span class="en">Up to 5 events</span></li>
+            <li><span class="bn">প্রতিটি অতিথির নামে লিংক</span><span class="en">A named link for every guest</span></li>
+            <li><span class="bn">RSVP + Google Sheet</span><span class="en">RSVP + Google Sheet</span></li>
+            <li><span class="bn">ছবির গ্যালারি</span><span class="en">Photo gallery</span></li>
+            <li><span class="bn">২৪ ঘণ্টায় ডেলিভারি · ২ বার সংশোধন</span><span class="en">24-hour delivery · 2 revisions</span></li>
+          </ul>
+          <a class="btn" href="order.html?package=popular"><span class="bn">বেছে নিন</span><span class="en">Choose</span></a>
+        </div>
+        <div class="price">
+          <h3><span class="bn">রাজকীয়</span><span class="en">Premium</span></h3>
+          <div class="amt"><span data-price="premium">৳3,999</span><small> +</small></div>
+          <ul>
+            <li><span class="bn">কাস্টম রং, মনোগ্রাম ও ফন্ট</span><span class="en">Custom colours, monogram & fonts</span></li>
+            <li><span class="bn">ভিডিও রিল ইনভাইট</span><span class="en">Video reel invite</span></li>
+            <li><span class="bn">নিজস্ব ডোমেইন (যেমন rafiwedsnusrat.com)</span><span class="en">Your own domain (e.g. rafiwedsnusrat.com)</span></li>
+            <li><span class="bn">প্রিন্টের জন্য QR কোড</span><span class="en">QR code for print</span></li>
+            <li><span class="bn">১ বছর অনলাইন · অগ্রাধিকার সাপোর্ট</span><span class="en">Online for 1 year · priority support</span></li>
+          </ul>
+          <a class="btn ghost" href="order.html?package=premium"><span class="bn">বেছে নিন</span><span class="en">Choose</span></a>
+        </div>
+      </div>
+      <div class="addons">
+        <span><span class="bn">অ্যাড-অন:</span><span class="en">Add-ons:</span></span>
+        <span><span class="bn">ভিডিও রিল</span><span class="en">Video reel</span> <b data-price="reel">৳500</b></span>
+        <span><span class="bn">অতিরিক্ত অনুষ্ঠান</span><span class="en">Extra event</span> <b data-price="extraEvent">৳300</b></span>
+        <span><span class="bn">QR প্রিন্ট ডিজাইন</span><span class="en">QR print design</span> <b data-price="qr">৳200</b></span>
+        <span><span class="bn">১২ ঘণ্টায় জরুরি ডেলিভারি</span><span class="en">12-hour rush</span> <b data-price="rush">৳300</b></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compare -->
+  <section class="block alt">
+    <div class="wrap">
+      <div class="sec-head"><h2><span class="bn">কাগজের কার্ড বনাম শুভ চিঠি</span><span class="en">Paper cards vs Shubho Chithi</span></h2></div>
+      <div class="compare">
+        <div>
+          <h3><span class="bn">📄 কাগজের কার্ড</span><span class="en">📄 Paper cards</span></h3>
+          <ul>
+            <li><span class="bn">৩০০ কার্ড × ৳৮০–১৫০ = ৳২৫,০০০+</span><span class="en">300 cards × ৳80–150 = ৳25,000+</span></li>
+            <li><span class="bn">ছাপা, বিলি — সপ্তাহের ঝামেলা</span><span class="en">Printing and delivery take weeks</span></li>
+            <li><span class="bn">ভুল হলে আবার ছাপাতে হয়</span><span class="en">A typo means reprinting</span></li>
+            <li><span class="bn">প্রবাসী আত্মীয়দের কাছে পৌঁছায় না</span><span class="en">Doesn't reach relatives abroad</span></li>
+          </ul>
+        </div>
+        <div class="good">
+          <h3><span class="bn">💌 শুভ চিঠি</span><span class="en">💌 Shubho Chithi</span></h3>
+          <ul>
+            <li><span class="bn">৳৯৯৯ থেকে — সব অতিথির জন্য</span><span class="en">From ৳999, for every guest</span></li>
+            <li><span class="bn">২৪–৪৮ ঘণ্টায় রেডি, এক ক্লিকে পাঠান</span><span class="en">Ready in 24–48 h, sent in one click</span></li>
+            <li><span class="bn">সময়/ভেন্যু বদলালে একই লিংকে আপডেট</span><span class="en">Change the time or venue and the same link updates</span></li>
+            <li><span class="bn">দুনিয়ার যেকোনো জায়গায় পৌঁছায়</span><span class="en">Reaches anyone, anywhere in the world</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block" id="faq">
+    <div class="wrap">
+      <div class="sec-head"><h2><span class="bn">সাধারণ প্রশ্ন</span><span class="en">Questions</span></h2></div>
+      <div class="faq">
+        <details><summary><span class="bn">অতিথিদের কি কোনো অ্যাপ লাগবে?</span><span class="en">Do guests need an app?</span></summary><p><span class="bn">না। WhatsApp, Messenger বা SMS-এ লিংক পাঠালেই যেকোনো ফোনের ব্রাউজারে খুলবে।</span><span class="en">No. Send the link on WhatsApp, Messenger or SMS and it opens in any phone browser.</span></p></details>
+        <details><summary><span class="bn">কত দিনে কার্ড পাব?</span><span class="en">How fast will I get it?</span></summary><p><span class="bn">তথ্য ও অগ্রিম পাওয়ার ২৪–৪৮ ঘণ্টার মধ্যে প্রিভিউ। জরুরি হলে ১২ ঘণ্টা (অ্যাড-অন)।</span><span class="en">A preview within 24–48 hours of receiving your details and advance, or 12 hours with the rush add-on.</span></p></details>
+        <details><summary><span class="bn">পেমেন্ট কীভাবে?</span><span class="en">How do I pay?</span></summary><p><span class="bn">বিকাশ বা নগদে অগ্রিম, প্রিভিউ পছন্দ হলে বাকি টাকা। ডিজাইন শুরুর আগে অগ্রিম ফেরতযোগ্য।</span><span class="en">An advance on bKash or Nagad, and the balance once you approve the preview. The advance is refundable until design work starts.</span></p></details>
+        <details><summary><span class="bn">পরে তারিখ বা ভেন্যু বদলাতে পারব?</span><span class="en">Can I change the date or venue later?</span></summary><p><span class="bn">হ্যাঁ। একই লিংকে আপডেট হয়ে যাবে, অতিথিদের নতুন লিংক পাঠাতে হবে না।</span><span class="en">Yes. The same link updates, so guests don't need a new one.</span></p></details>
+        <details><summary><span class="bn">হিন্দু বিয়ে বা অন্য অনুষ্ঠানের জন্য হবে?</span><span class="en">Do you do Hindu weddings or other events?</span></summary><p><span class="bn">অবশ্যই — লালপাড় ডিজাইন হিন্দু বিয়ের জন্য। জন্মদিন, আকিকা, এনগেজমেন্টের কার্ডও করি।</span><span class="en">Yes. The Lal Paar design is made for Hindu weddings, and we also make birthday, aqiqah and engagement cards.</span></p></details>
+        <details><summary><span class="bn">লিংক কতদিন থাকবে?</span><span class="en">How long does the link stay online?</span></summary><p><span class="bn">বেসিকে অনুষ্ঠানের পর ৬ মাস, প্রিমিয়ামে ১ বছর। চাইলে বাড়ানো যায়।</span><span class="en">6 months after the event on Basic and 1 year on Premium. It can be extended.</span></p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="block">
+    <div class="wrap">
+      <div class="cta">
+        <h2><span class="bn">আপনার শুভ দিনের দাওয়াত শুরু হোক আজই</span><span class="en">Start your wedding invitations today</span></h2>
+        <p><span class="bn">ডিজাইন বাছুন, তথ্য দিন — বাকিটা আমাদের।</span><span class="en">Pick a design and send your details. We'll do the rest.</span></p>
+        <a class="btn gold" href="order.html"><span class="bn">অর্ডার করুন</span><span class="en">Order now</span></a>
+        <a class="btn gold" data-wa><span class="bn">WhatsApp</span><span class="en">WhatsApp</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© <span data-year>2026</span> Shubho Chithi · শুভ চিঠি</div>
+    <nav aria-label="Footer">
+      <a data-cfg="email" data-text data-hide-empty></a>
+      <a data-cfg="facebook" data-hide-empty>Facebook</a>
+      <a data-cfg="instagram" data-hide-empty>Instagram</a>
+      <a data-cfg="tiktok" data-hide-empty>TikTok</a>
+      <a href="order.html"><span class="bn">অর্ডার</span><span class="en">Order</span></a>
+    </nav>
+  </div>
+</footer>
+
+<a class="wa-float" data-wa aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.7c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-1-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.3-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.7 5.8 5.1 2.2.9 3 1 4.1.8.7-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5l-.6-.3z"/></svg>
+</a>
+
+<script src="site-config.js?v=1"></script>
+<script src="assets/site.js?v=1"></script>
 </body>
 </html>
