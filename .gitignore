@@ -6,3 +6,8 @@ Business-Plan.md
 # OS clutter
 Thumbs.db
 .DS_Store
+
+# Lipighor fonts: licence forbids uploading them to a website
+fonts-private/
+*.ttf
+*.otf
