@@ -1,0 +1,22 @@
+/*
+  Lipighor Bangla web fonts — used on shubhochithi.com with permission from Lipighor (admin@lipighor.com).
+  Web font credit: lipighor.com (link shown in the site and card footers, as the licence requires).
+  The font files live only on the web server (fonts/lipighor/), not in the public GitHub repo.
+
+  unicode-range limits each font to Bangla characters, so English text keeps its own font
+  even when a Lipighor family is listed first in a font stack.
+*/
+@font-face { font-family: "Li Ador Noirrit"; src: url("lipighor/ador-noirrit-regular.woff2") format("woff2"); font-weight: 400; font-display: swap; unicode-range: U+0964-0965, U+0980-09FF, U+200C-200D, U+25CC; }
+@font-face { font-family: "Li Ador Noirrit"; src: url("lipighor/ador-noirrit-semibold.woff2") format("woff2"); font-weight: 500 600; font-display: swap; unicode-range: U+0964-0965, U+0980-09FF, U+200C-200D, U+25CC; }
+@font-face { font-family: "Li Ador Noirrit"; src: url("lipighor/ador-noirrit-bold.woff2") format("woff2"); font-weight: 700 900; font-display: swap; unicode-range: U+0964-0965, U+0980-09FF, U+200C-200D, U+25CC; }
+@font-face { font-family: "Li Shadhinata 2.0"; src: url("lipighor/shadhinata-2-0.woff2") format("woff2"); font-weight: 400 900; font-display: swap; unicode-range: U+0964-0965, U+0980-09FF, U+200C-200D, U+25CC; }
+@font-face { font-family: "Li Subha Sandhya"; src: url("lipighor/subha-sandhya.woff2") format("woff2"); font-weight: 400 900; font-display: swap; unicode-range: U+0964-0965, U+0980-09FF, U+200C-200D, U+25CC; }
+@font-face { font-family: "Li Alinur Banglaborno"; src: url("lipighor/alinur-banglaborno.woff2") format("woff2"); font-display: swap; unicode-range: U+0964-0965, U+0980-09FF, U+200C-200D, U+25CC; }
+@font-face { font-family: "Li Sweet Shreyam"; src: url("lipighor/sweet-shreyam.woff2") format("woff2"); font-weight: 400 900; font-display: swap; unicode-range: U+0964-0965, U+0980-09FF, U+200C-200D, U+25CC; }
+@font-face { font-family: "Li Alinur Smaroklipi"; src: url("lipighor/alinur-smaroklipi.woff2") format("woff2"); font-display: swap; unicode-range: U+0964-0965, U+0980-09FF, U+200C-200D, U+25CC; }
+@font-face { font-family: "Li Mainak Buniyadi"; src: url("lipighor/mainak-buniyadi.woff2") format("woff2"); font-weight: 400 900; font-display: swap; unicode-range: U+0964-0965, U+0980-09FF, U+200C-200D, U+25CC; }
+@font-face { font-family: "Li Chayana Teesta"; src: url("lipighor/chayana-teesta.woff2") format("woff2"); font-display: swap; unicode-range: U+0964-0965, U+0980-09FF, U+200C-200D, U+25CC; }
+@font-face { font-family: "Li Hasan Iccheghuri"; src: url("lipighor/hasaniccheghuri-regular.woff2") format("woff2"); font-weight: 400 900; font-display: swap; unicode-range: U+0964-0965, U+0980-09FF, U+200C-200D, U+25CC; }
+@font-face { font-family: "Li Mahfuj AK"; src: url("lipighor/mahfuj-ak.woff2") format("woff2"); font-weight: 400 900; font-display: swap; unicode-range: U+0964-0965, U+0980-09FF, U+200C-200D, U+25CC; }
+
+.lipighor-credit a { color: inherit; }

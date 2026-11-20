@@ -244,3 +244,9 @@ html[lang="bn"] .h2 { font-family: var(--bn-display); font-size: 42px; }
   .confetti { display: none; }
   .stage .bar.run i { animation-duration: var(--dur, 7s) !important; } /* keep story timing */
 }
+
+/* ===== Lipighor web fonts: display = Li Sweet Shreyam, body = Li Alinur Smaroklipi ===== */
+:root { --display: "Yeseva One", "Li Sweet Shreyam", "Galada", serif;
+  --bn-display: "Li Sweet Shreyam", "Galada", "Baloo Da 2", cursive;
+  --body: "Baloo Da 2", "Li Alinur Smaroklipi", system-ui, sans-serif; }
+html[lang="bn"] body { font-family: "Li Alinur Smaroklipi", "Baloo Da 2", system-ui, sans-serif; }

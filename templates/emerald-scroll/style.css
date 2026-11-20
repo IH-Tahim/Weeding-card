@@ -202,3 +202,10 @@ html[lang="bn"] .sign { font-family: var(--bn); font-size: 24px; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .2s !important; }
 }
+
+/* ===== Lipighor web fonts: display = Li Hasan Iccheghuri, body = Li Alinur Banglaborno ===== */
+:root { --bn: "Li Alinur Banglaborno", "Tiro Bangla", "Hind Siliguri", serif;
+  --serif: "Cormorant Garamond", "Li Alinur Banglaborno", "Tiro Bangla", serif;
+  --script: "Italianno", "Li Hasan Iccheghuri", "Tiro Bangla", cursive; }
+html[lang="bn"] .dear, html[lang="bn"] .names span, html[lang="bn"] .ev-title, html[lang="bn"] .h2,
+html[lang="bn"] .sign, html[lang="bn"] .families h3 { font-family: "Li Hasan Iccheghuri", var(--bn); font-weight: 400; }

@@ -13,9 +13,9 @@
   --wa: #1f9d55;
   --radius: 16px;
   --shadow: 0 14px 34px -20px rgba(80, 40, 20, .45);
-  --head: "Noto Serif Bengali", "Cormorant Garamond", serif;
+  --head: "Li Shadhinata 2.0", "Noto Serif Bengali", "Cormorant Garamond", serif;
   --en-head: "Cormorant Garamond", "Noto Serif Bengali", serif;
-  --body: "Hind Siliguri", system-ui, sans-serif;
+  --body: "Hind Siliguri", "Li Ador Noirrit", system-ui, sans-serif;
   --script: "Great Vibes", cursive;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -39,7 +39,7 @@ body.l-bn .en, body.l-en .bn { display: none !important; }
 .nav .wrap { display: flex; align-items: center; gap: 14px; height: 62px; }
 .logo { display: flex; align-items: center; gap: 9px; text-decoration: none; }
 .logo svg, .logo img { width: 34px; height: 34px; flex: none; }
-.logo b { display: block; font-family: var(--head); font-weight: 800; font-size: 20px; color: var(--maroon); line-height: 1.05; }
+.logo b { display: block; font-family: "Noto Serif Bengali", serif; font-weight: 800; font-size: 20px; color: var(--maroon); line-height: 1.05; }
 .logo small { display: block; font-family: var(--script); font-size: 17px; color: var(--gold); line-height: 1; }
 .links { display: flex; gap: 18px; margin-left: auto; }
 .links a { text-decoration: none; font-weight: 500; color: var(--muted); font-size: 15px; }
@@ -230,3 +230,8 @@ legend { font-weight: 700; font-size: 17px; padding: 0 8px; color: var(--maroon)
 .err { color: #b3261e; font-size: 14px; min-height: 1.3em; }
 .done-box { background: #fff; border: 2px solid var(--wa); border-radius: var(--radius); padding: 22px; text-align: center; }
 .done-box h2 { font-family: var(--head); color: var(--wa); }
+
+/* Lipighor fonts: Bangla body text in Ador Noirrit, headings in Shadhinata 2.0 (weights come from the font itself) */
+body.l-bn { font-family: "Li Ador Noirrit", "Hind Siliguri", system-ui, sans-serif; }
+.hero h1, .sec-head h2, .cta h2, .order-wrap h1 { font-weight: 400; }
+body.l-en .hero h1, body.l-en .sec-head h2, body.l-en .order-wrap h1 { font-weight: 600; }

@@ -11,3 +11,6 @@ Thumbs.db
 fonts-private/
 *.ttf
 *.otf
+
+# Lipighor web fonts: deployed to Hostinger only, never pushed to the public GitHub repo
+fonts/lipighor/

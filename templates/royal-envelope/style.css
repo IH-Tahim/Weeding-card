@@ -302,3 +302,10 @@ html[lang="bn"] .thanks .signoff { font-family: var(--bangla); font-size: 26px; 
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .2s !important; }
   .petals { display: none; }
 }
+
+/* ===== Lipighor web fonts: display = Li Subha Sandhya, body = Li Alinur Banglaborno ===== */
+:root { --bangla: "Li Alinur Banglaborno", "Tiro Bangla", "Hind Siliguri", serif;
+  --serif: "Cormorant Garamond", "Li Alinur Banglaborno", "Tiro Bangla", Georgia, serif;
+  --script: "Great Vibes", "Li Subha Sandhya", "Tiro Bangla", cursive; }
+html[lang="bn"] .cover-dear, html[lang="bn"] .names span:not(.amp), html[lang="bn"] .script-title,
+html[lang="bn"] .event h3, html[lang="bn"] .thanks .signoff { font-family: "Li Subha Sandhya", var(--bangla); }

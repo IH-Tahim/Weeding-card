@@ -159,3 +159,9 @@ html[lang="bn"] .sign { font-family: var(--bn-bold); font-weight: 800; font-size
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .2s !important; }
 }
+
+/* ===== Lipighor web fonts: display = Li Mahfuj AK, body = Li Alinur Banglaborno ===== */
+:root { --bn: "Li Alinur Banglaborno", "Tiro Bangla", "Noto Serif Bengali", serif;
+  --bn-bold: "Li Mahfuj AK", "Noto Serif Bengali", serif;
+  --serif: "Lora", "Li Alinur Banglaborno", "Tiro Bangla", serif;
+  --display: "Rozha One", "Li Mahfuj AK", "Noto Serif Bengali", serif; }

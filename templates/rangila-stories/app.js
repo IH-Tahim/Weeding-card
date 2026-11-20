@@ -171,7 +171,7 @@
         h("p", { class: "kicker", text: s("call") }),
         D.contacts.map((p) => h("a", { href: "tel:" + p.phone.replace(/[^\d+]/g, "") }, h("span", { text: t(p.name) }), h("b", { text: p.phone })))) : null,
       h("button", { class: "btn alt pop", i: 6, id: "againBtn", style: "margin-top:16px", text: s("again") }),
-      pop(7, "p", "credit", `Made with ♥ by ${D.brand || "Shubho Chithi"}`)
+      (() => { const p = pop(7, "p", "credit", `Made with ♥ by ${D.brand || "Shubho Chithi"} · Web font: `); const a = h("a", { href: "https://lipighor.com", target: "_blank", rel: "noopener", text: "lipighor.com", style: "color:inherit" }); p.append(a); return p; })()
     ), true);
 
     const host = $("#slides"); host.textContent = ""; list.forEach((x) => host.append(x.el));

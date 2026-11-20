@@ -231,3 +231,10 @@ html[lang="bn"] .sign { font-family: var(--bn); font-size: 24px; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .2s !important; }
   .lanterns { display: none; }
 }
+
+/* ===== Lipighor web fonts: display = Li Mainak Buniyadi, body = Li Chayana Teesta ===== */
+:root { --bn: "Li Chayana Teesta", "Noto Serif Bengali", "Hind Siliguri", serif;
+  --serif: "Cormorant Garamond", "Li Chayana Teesta", "Noto Serif Bengali", serif;
+  --script: "Pinyon Script", "Li Mainak Buniyadi", "Noto Serif Bengali", cursive; }
+html[lang="bn"] .intro-dear, html[lang="bn"] .u-names, html[lang="bn"] .names span, html[lang="bn"] .title,
+html[lang="bn"] .tl-title, html[lang="bn"] .sign, html[lang="bn"] .arch h3 { font-family: "Li Mainak Buniyadi", var(--bn); font-weight: 400; }
