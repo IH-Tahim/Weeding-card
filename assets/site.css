@@ -38,7 +38,7 @@ body.l-bn .en, body.l-en .bn { display: none !important; }
 }
 .nav .wrap { display: flex; align-items: center; gap: 14px; height: 62px; }
 .logo { display: flex; align-items: center; gap: 9px; text-decoration: none; }
-.logo svg { width: 34px; height: 34px; flex: none; }
+.logo svg, .logo img { width: 34px; height: 34px; flex: none; }
 .logo b { display: block; font-family: var(--head); font-weight: 800; font-size: 20px; color: var(--maroon); line-height: 1.05; }
 .logo small { display: block; font-family: var(--script); font-size: 17px; color: var(--gold); line-height: 1; }
 .links { display: flex; gap: 18px; margin-left: auto; }
