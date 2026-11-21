@@ -235,3 +235,15 @@ legend { font-weight: 700; font-size: 17px; padding: 0 8px; color: var(--maroon)
 body.l-bn { font-family: "Li Ador Noirrit", "Hind Siliguri", system-ui, sans-serif; }
 .hero h1, .sec-head h2, .cta h2, .order-wrap h1 { font-weight: 400; }
 body.l-en .hero h1, body.l-en .sec-head h2, body.l-en .order-wrap h1 { font-weight: 600; }
+
+/* new design thumbnails */
+.t-silk { background: radial-gradient(circle at 20% 20%, rgba(201,139,139,.3), transparent 40%), radial-gradient(circle at 80% 80%, rgba(156,175,136,.3), transparent 40%), #f4dcd6; }
+.t-silk .sbox { position: relative; width: 140px; height: 180px; background: #fffaf6; box-shadow: 0 0 0 6px #fffaf6 inset, 0 0 0 7px #ecdcb6 inset, 0 18px 30px -14px rgba(142,74,82,.5); border-radius: 4px; }
+.t-silk .sv { position: absolute; left: 50%; top: 0; bottom: 0; width: 16px; margin-left: -8px; background: linear-gradient(90deg,#b9787b,#e9b7b0,#c98b8b); }
+.t-silk .sh { position: absolute; top: 50%; left: 0; right: 0; height: 16px; margin-top: -8px; background: linear-gradient(180deg,#b9787b,#e9b7b0,#c98b8b); }
+.t-silk .sbow { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-55%); font-size: 54px; filter: saturate(.7) drop-shadow(0 4px 6px rgba(142,74,82,.4)); }
+.t-pola { background: radial-gradient(circle at 50% 45%, #a77b52, #7a5434 70%); }
+.t-pola .pp { position: absolute; width: 120px; background: #fffdf8; padding: 7px 7px 0; box-shadow: 0 12px 22px -10px rgba(0,0,0,.6); }
+.t-pola .pp img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.t-pola .pp i { display: block; height: 28px; line-height: 28px; text-align: center; font-family: "Caveat", cursive; font-style: normal; font-size: 15px; color: #2f2a24; }
+.t-pola .p1 { transform: rotate(-8deg) translateX(-38px); } .t-pola .p2 { transform: rotate(7deg) translateX(40px); filter: sepia(.35); }

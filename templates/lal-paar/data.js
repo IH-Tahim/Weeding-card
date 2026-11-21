@@ -85,8 +85,12 @@ window.INVITE = {
     { name: { en: "Bride's side — Bimal", bn: "কনে পক্ষ — বিমল" }, phone: "+8801800000000" }
   ],
 
+  // Couple photo (e.g. "couple.jpg"); empty = built-in bride & groom illustration
+  photo: "",
   gallery: [],
+  // Soft music fades in on the first tap; empty = built-in instrumental, or your own licensed "music.mp3"
   music: "",
+  musicEnabled: true,
 
   closing: {
     en: "Your presence and blessings will make this auspicious day complete.",

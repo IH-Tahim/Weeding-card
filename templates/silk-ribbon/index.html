@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wedding Invitation</title>
+<meta name="description" content="Pull the silk ribbon to open your wedding invitation.">
+<meta property="og:title" content="You're invited 🎀">
+<meta property="og:description" content="Untie the ribbon to open your wedding invitation.">
+<meta name="theme-color" content="#f4dcd6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Hind+Siliguri:wght@400;500;600&family=Jost:wght@400;500&family=Parisienne&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../fonts/lipighor.css?v=1">
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body class="locked">
+
+<!-- ============ RIBBON BOX (opening screen) ============ -->
+<section class="intro" id="intro">
+  <button class="pill lang-pos" data-lang-toggle></button>
+  <p class="dear" id="dear"></p>
+
+  <div class="box" id="box">
+    <div class="inside" aria-hidden="true">
+      <img class="inside-photo" data-photo alt="">
+      <span class="inside-names" id="insideNames"></span>
+    </div>
+    <div class="door left"></div>
+    <div class="door right"></div>
+
+    <div class="band v" aria-hidden="true"></div>
+    <div class="band h" aria-hidden="true"></div>
+    <span class="emb" data-mono aria-hidden="true"></span>
+
+    <div class="bow" id="bow" role="button" tabindex="0" aria-label="Pull the ribbon to open">
+      <svg viewBox="0 0 220 200" aria-hidden="true">
+        <defs>
+          <linearGradient id="satin" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#e9b7b0"/><stop offset=".35" stop-color="#c98b8b"/>
+            <stop offset=".6" stop-color="#f2cdc6"/><stop offset="1" stop-color="#b06f72"/>
+          </linearGradient>
+          <linearGradient id="satin2" x1="1" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#e9b7b0"/><stop offset=".4" stop-color="#b9787b"/>
+            <stop offset=".7" stop-color="#f0c8c1"/><stop offset="1" stop-color="#a86669"/>
+          </linearGradient>
+        </defs>
+        <g class="tail tl"><path d="M100 96 L62 190 L80 180 L88 198 L118 102 Z" fill="url(#satin2)"/></g>
+        <g class="tail tr"><path d="M120 96 L158 190 L140 180 L132 198 L102 102 Z" fill="url(#satin)"/></g>
+        <g class="loop ll"><path d="M106 90 C70 40 18 46 22 86 C26 122 76 116 106 98 Z" fill="url(#satin)"/><path d="M100 92 C76 66 44 66 40 84" stroke="#a86669" stroke-width="3" fill="none" opacity=".45"/></g>
+        <g class="loop lr"><path d="M114 90 C150 40 202 46 198 86 C194 122 144 116 114 98 Z" fill="url(#satin2)"/><path d="M120 92 C144 66 176 66 180 84" stroke="#a86669" stroke-width="3" fill="none" opacity=".45"/></g>
+        <g class="knot"><rect x="96" y="80" width="28" height="26" rx="10" fill="url(#satin)"/><rect x="100" y="84" width="20" height="18" rx="7" fill="none" stroke="#fff" stroke-opacity=".35"/></g>
+      </svg>
+    </div>
+  </div>
+
+  <p class="hint" id="hint" data-i18n="pull"></p>
+</section>
+
+<!-- ============ INVITATION ============ -->
+<main class="page" id="page" hidden>
+  <div class="top-bar"><button class="pill" data-lang-toggle></button></div>
+
+  <header class="hero">
+    <p class="bismillah" id="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+    <div class="arch-photo">
+      <img data-photo alt="">
+      <span class="mini-bow" aria-hidden="true">🎀</span>
+    </div>
+    <p class="label" data-i18n="weddingOf"></p>
+    <h1 class="names"><span id="gName"></span><em>&amp;</em><span id="bName"></span></h1>
+    <p class="msg" id="message"></p>
+    <p class="hero-date" id="heroDate"></p>
+  </header>
+
+  <section class="sec fade">
+    <p class="label" data-i18n="families"></p>
+    <div class="fams">
+      <div><p class="role" data-i18n="groom"></p><h3 id="gFull"></h3><p class="par" id="gParents"></p></div>
+      <div class="amp-mid" aria-hidden="true">&amp;</div>
+      <div><p class="role" data-i18n="bride"></p><h3 id="bFull"></h3><p class="par" id="bParents"></p></div>
+    </div>
+  </section>
+
+  <section class="sec fade">
+    <p class="label" data-i18n="schedule"></p>
+    <h2 class="title" data-i18n="scheduleH"></h2>
+    <div class="events" id="events"></div>
+  </section>
+
+  <section class="sec fade">
+    <p class="label" data-i18n="countdown"></p>
+    <h2 class="title" id="cdTitle"></h2>
+    <div class="cd" id="cd">
+      <div><b data-cd="d">0</b><span data-i18n="days"></span></div>
+      <div><b data-cd="h">0</b><span data-i18n="hours"></span></div>
+      <div><b data-cd="m">0</b><span data-i18n="minutes"></span></div>
+      <div><b data-cd="s">0</b><span data-i18n="seconds"></span></div>
+    </div>
+    <p class="done" id="cdDone" hidden data-i18n="married"></p>
+    <button class="btn ghost" id="saveDate" type="button" data-i18n="saveDate"></button>
+  </section>
+
+  <section class="sec fade" id="gallerySec" hidden>
+    <p class="label" data-i18n="moments"></p>
+    <div class="gallery" id="gallery"></div>
+  </section>
+
+  <section class="sec fade" id="rsvpSec">
+    <p class="label" data-i18n="rsvp"></p>
+    <h2 class="title" data-i18n="rsvpH"></h2>
+    <p class="msg small" id="deadline"></p>
+    <form class="rsvp" id="rsvpForm" novalidate>
+      <label><span data-i18n="yourName"></span><input id="rName" name="name" maxlength="60" autocomplete="name"></label>
+      <div class="choice">
+        <label><input type="radio" name="attending" value="yes" checked><span data-i18n="accept"></span></label>
+        <label><input type="radio" name="attending" value="no"><span data-i18n="decline"></span></label>
+      </div>
+      <label id="guestsWrap"><span data-i18n="guests"></span>
+        <select name="guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select>
+      </label>
+      <label><span data-i18n="wish"></span><textarea name="message" rows="3" maxlength="200"></textarea></label>
+      <button class="btn" type="submit" data-i18n="send"></button>
+      <p class="status" id="status" role="status"></p>
+    </form>
+  </section>
+
+  <section class="sec fade end">
+    <div class="contacts" id="contacts"></div>
+    <h2 class="title big" data-i18n="thanks"></h2>
+    <p class="msg" id="closing"></p>
+    <p class="sign" id="sign"></p>
+    <p class="tag" id="hashtag"></p>
+    <p class="credit">Made with ♥ by <span id="brand"></span> · <span class="lipighor-credit">Web font: <a href="https://lipighor.com" target="_blank" rel="noopener">lipighor.com</a></span></p>
+  </section>
+</main>
+
+<div class="rotate-msg" data-i18n="rotate"></div>
+<script src="data.js"></script>
+<script src="../shared/media.js?v=2"></script>
+<script src="app.js?v=1"></script>
+</body>
+</html>

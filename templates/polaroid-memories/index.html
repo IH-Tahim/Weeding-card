@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wedding Invitation</title>
+<meta name="description" content="Swipe through our love story and open your wedding invitation.">
+<meta property="og:title" content="Our story, your invitation 📸">
+<meta property="og:description" content="Swipe the photos to open your wedding invitation.">
+<meta name="theme-color" content="#efe4cf">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri&family=Caveat:wght@500;700&family=DM+Serif+Display&family=Hind+Siliguri:wght@400;500;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../fonts/lipighor.css?v=2">
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body class="locked">
+
+<!-- ============ POLAROID STACK (opening screen) ============ -->
+<section class="intro" id="intro">
+  <button class="pill lang-pos" data-lang-toggle></button>
+  <p class="intro-top"><span id="dear"></span></p>
+  <div class="stack" id="stack" aria-live="polite"></div>
+  <p class="hint" id="hint" data-i18n="swipe"></p>
+  <p class="count" id="count"></p>
+</section>
+
+<!-- ============ SCRAPBOOK ============ -->
+<main class="page" id="page" hidden>
+  <div class="top-bar"><button class="pill" data-lang-toggle></button></div>
+
+  <header class="hero">
+    <p class="bismillah" id="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+    <figure class="pol big tilt-l">
+      <span class="tape t1" aria-hidden="true"></span><span class="tape t2" aria-hidden="true"></span>
+      <img data-photo alt="">
+      <figcaption class="hand" id="heroCap"></figcaption>
+    </figure>
+    <h1 class="names"><span id="gName"></span> <em>&amp;</em> <span id="bName"></span></h1>
+    <p class="hand sub" data-i18n="getting"></p>
+    <div class="stamp" aria-hidden="true"><span id="stampDay"></span><small id="stampMonth"></small></div>
+    <p class="msg" id="message"></p>
+  </header>
+
+  <section class="sec fade">
+    <h2 class="sec-title"><span data-i18n="storyTitle"></span></h2>
+    <div class="strip" id="strip"></div>
+  </section>
+
+  <section class="sec fade">
+    <div class="notebook">
+      <p class="hand nb-title" data-i18n="families"></p>
+      <div class="nb-row"><span class="role" data-i18n="groom"></span><b id="gFull"></b><small id="gParents"></small></div>
+      <div class="nb-row"><span class="role" data-i18n="bride"></span><b id="bFull"></b><small id="bParents"></small></div>
+    </div>
+  </section>
+
+  <section class="sec fade">
+    <h2 class="sec-title"><span data-i18n="scheduleH"></span></h2>
+    <div class="tickets" id="events"></div>
+  </section>
+
+  <section class="sec fade">
+    <div class="note-paper">
+      <span class="tape t3" aria-hidden="true"></span>
+      <p class="hand nb-title" id="cdTitle"></p>
+      <div class="cd" id="cd">
+        <div><b data-cd="d">0</b><span data-i18n="days"></span></div>
+        <div><b data-cd="h">0</b><span data-i18n="hours"></span></div>
+        <div><b data-cd="m">0</b><span data-i18n="minutes"></span></div>
+        <div><b data-cd="s">0</b><span data-i18n="seconds"></span></div>
+      </div>
+      <p class="hand done" id="cdDone" hidden data-i18n="married"></p>
+      <button class="btn" id="saveDate" type="button" data-i18n="saveDate"></button>
+    </div>
+  </section>
+
+  <section class="sec fade" id="gallerySec" hidden>
+    <h2 class="sec-title"><span data-i18n="moments"></span></h2>
+    <div class="gallery" id="gallery"></div>
+  </section>
+
+  <section class="sec fade" id="rsvpSec">
+    <div class="postcard">
+      <div class="pc-stamp" aria-hidden="true"><img data-photo alt=""></div>
+      <p class="hand nb-title" data-i18n="rsvpH"></p>
+      <p class="msg small" id="deadline"></p>
+      <form class="rsvp" id="rsvpForm" novalidate>
+        <label><span data-i18n="yourName"></span><input id="rName" name="name" maxlength="60" autocomplete="name"></label>
+        <div class="choice">
+          <label><input type="radio" name="attending" value="yes" checked><span data-i18n="accept"></span></label>
+          <label><input type="radio" name="attending" value="no"><span data-i18n="decline"></span></label>
+        </div>
+        <label id="guestsWrap"><span data-i18n="guests"></span>
+          <select name="guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select>
+        </label>
+        <label><span data-i18n="wish"></span><textarea name="message" rows="3" maxlength="200"></textarea></label>
+        <button class="btn" type="submit" data-i18n="send"></button>
+        <p class="status" id="status" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="sec fade end">
+    <div class="contacts" id="contacts"></div>
+    <p class="hand thanks" data-i18n="thanks"></p>
+    <p class="msg" id="closing"></p>
+    <p class="hand sign" id="sign"></p>
+    <p class="tag" id="hashtag"></p>
+    <p class="credit">Made with ♥ by <span id="brand"></span> · <span class="lipighor-credit">Web font: <a href="https://lipighor.com" target="_blank" rel="noopener">lipighor.com</a></span></p>
+  </section>
+</main>
+
+<div class="rotate-msg" data-i18n="rotate"></div>
+<script src="data.js"></script>
+<script src="../shared/media.js?v=2"></script>
+<script src="app.js?v=1"></script>
+</body>
+</html>

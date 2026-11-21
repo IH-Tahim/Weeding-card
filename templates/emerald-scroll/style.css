@@ -209,3 +209,8 @@ html[lang="bn"] .sign { font-family: var(--bn); font-size: 24px; }
   --script: "Italianno", "Li Hasan Iccheghuri", "Tiro Bangla", cursive; }
 html[lang="bn"] .dear, html[lang="bn"] .names span, html[lang="bn"] .ev-title, html[lang="bn"] .h2,
 html[lang="bn"] .sign, html[lang="bn"] .families h3 { font-family: "Li Hasan Iccheghuri", var(--bn); font-weight: 400; }
+
+/* Couple photo + shared sheets */
+:root { --sc-accent: #0b3d2e; --sc-accent-soft: #e2efe9; }
+.e-photo { width: min(70%, 240px); aspect-ratio: 4 / 5; margin: 0 auto; border-radius: 999px 999px 8px 8px; padding: 4px; background: linear-gradient(180deg, #f3e2ac, #b8923a); box-shadow: 0 14px 26px -16px rgba(6,36,25,.7); }
+.e-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 999px 999px 6px 6px; display: block; }

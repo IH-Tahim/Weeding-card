@@ -165,3 +165,9 @@ html[lang="bn"] .sign { font-family: var(--bn-bold); font-weight: 800; font-size
   --bn-bold: "Li Mahfuj AK", "Noto Serif Bengali", serif;
   --serif: "Lora", "Li Alinur Banglaborno", "Tiro Bangla", serif;
   --display: "Rozha One", "Li Mahfuj AK", "Noto Serif Bengali", serif; }
+
+/* Couple photo + shared sheets */
+:root { --sc-accent: #a3121c; --sc-accent-soft: #fbe5e5; }
+.l-photo { width: 168px; height: 168px; margin: 20px auto 4px; border-radius: 50%; padding: 5px; background: conic-gradient(from 0deg, var(--red), var(--gold), var(--red), var(--gold), var(--red)); box-shadow: 0 10px 24px -12px rgba(109,10,18,.6); }
+.l-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 4px solid var(--cream); display: block; }
+.alpana { width: 96px; height: 96px; }

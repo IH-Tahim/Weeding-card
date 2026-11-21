@@ -78,13 +78,19 @@ window.INVITE = {
     { name: { en: "Bride's side — Shafiq", bn: "কনে পক্ষ — শফিক" }, phone: "+8801800000000" }
   ],
 
+  // Couple photo shown in the card (put the file next to index.html, e.g. "couple.jpg").
+  // Leave empty to show the built-in Bangladeshi bride & groom illustration.
+  photo: "",
+
   // Optional photos (put files in a "photos" folder next to index.html)
   gallery: [
     // "photos/1.jpg", "photos/2.jpg"
   ],
 
-  // Optional background music — use only music you have the licence for.
-  music: "", // e.g. "music.mp3"
+  // Background music starts very softly on the first tap and slowly gets louder; guests can turn it off.
+  // Leave empty for the built-in soft instrumental, or put your own licensed file, e.g. "music.mp3".
+  music: "",
+  musicEnabled: true, // false = no music at all
 
   closing: {
     en: "Your presence and prayers will make our day complete.",

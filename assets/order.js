@@ -116,7 +116,7 @@
       rsvp: { enabled: pkg !== "basic", deadline: f.rsvpDeadline ? `${f.rsvpDeadline}T23:59:00+06:00` : "", sheetUrl: "", whatsapp: "" },
       contacts: [contactOf(f.contact1), contactOf(f.contact2)].filter(Boolean),
       gallery: [],
-      music: f.music === "none" ? "" : "music.mp3",
+      photo: "", music: f.music === "own" ? "music.mp3" : "", musicEnabled: f.music !== "none",
       closing: { en: "Your presence and prayers will make our day complete.", bn: "আপনার উপস্থিতি ও দোয়া আমাদের দিনটিকে পরিপূর্ণ করবে।" }
     };
     const dataJs = `// ${orderId} — ${gEn} & ${bEn} — design: ${f.design}\n// Check the short names, parents and texts before publishing.\nwindow.INVITE = ${JSON.stringify(invite, null, 2)};\n`;

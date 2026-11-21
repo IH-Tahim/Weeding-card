@@ -95,6 +95,7 @@
 
     // 2. Families
     add(h("section", null,
+      h("img", { class: "cpic pop", i: 0, src: (window.SC && SC.photo) || "../shared/couple.svg", alt: "" }),
       pop(0, "p", "kicker", s("families")),
       h("div", { class: "person pop", i: 1 }, h("p", { class: "role", text: s("groom") }), h("h3", { text: t(D.groom.full) }), h("p", { text: t(D.groom.parents) })),
       pop(2, "div", "heart", "💛"),
