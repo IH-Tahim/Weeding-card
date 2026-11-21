@@ -17,7 +17,7 @@ window.SITE = {
   nagad: "",
 
   email: "hello@shubhochithi.com",
-  facebook: "",   // full page URL, e.g. "https://facebook.com/shubhochithi"
+  facebook: "https://www.facebook.com/shubhochithi",
   instagram: "",  // e.g. "https://instagram.com/shubhochithi"
   tiktok: "",     // e.g. "https://tiktok.com/@shubhochithi"
 
