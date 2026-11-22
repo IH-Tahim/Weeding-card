@@ -10,6 +10,7 @@ Mobile-first wedding invitation websites for Bangladesh: an animated envelope op
 | Midnight Scratch | Navy & gold luxury, scratch to reveal | [`templates/midnight-scratch`](templates/midnight-scratch) |
 | Emerald Scroll | Islamic emerald & gold, pull to unroll | [`templates/emerald-scroll`](templates/emerald-scroll) |
 | Lal Paar | Hindu wedding, red & white, light the diya | [`templates/lal-paar`](templates/lal-paar) |
+| Rose Arch | Trending: embossed seal envelope, misty rose arch, hanging date, event carousel | [`templates/rose-arch`](templates/rose-arch) |
 | Silk Ribbon | Modern blush & champagne, untie the bow | [`templates/silk-ribbon`](templates/silk-ribbon) |
 | Polaroid Memories | Scrapbook photo story, swipe the Polaroids | [`templates/polaroid-memories`](templates/polaroid-memories) |
 

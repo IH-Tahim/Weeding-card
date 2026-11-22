@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wedding Invitation</title>
+<meta name="description" content="Break the wax seal to open your wedding invitation.">
+<meta property="og:title" content="You're invited 🌸">
+<meta property="og:description" content="Break the wax seal to open your wedding invitation.">
+<meta name="theme-color" content="#f6e4e6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Hind+Siliguri:wght@400;500;600&family=Jost:wght@400;500&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../fonts/lipighor.css?v=2">
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body class="locked">
+
+<!-- SVG filter that gives paper an embossed, carved look -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="emboss" x="-10%" y="-10%" width="120%" height="120%">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="2.2" result="blur"/>
+    <feSpecularLighting in="blur" surfaceScale="4" specularConstant=".9" specularExponent="18" lighting-color="#fff7f8" result="spec">
+      <fePointLight x="-120" y="-200" z="260"/>
+    </feSpecularLighting>
+    <feComposite in="spec" in2="SourceAlpha" operator="in" result="specIn"/>
+    <feComposite in="SourceGraphic" in2="specIn" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+  </filter>
+</svg>
+
+<!-- ============ EMBOSSED ENVELOPE (opening) ============ -->
+<section class="intro" id="intro">
+  <button class="pill lang-pos" data-lang-toggle></button>
+  <div class="env" id="env">
+    <svg class="relief" viewBox="0 0 360 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g filter="url(#emboss)" fill="#d9b8bf">
+        <path d="M-20 520 C40 420 60 320 30 220 C90 300 110 400 80 520 Z"/>
+        <path d="M30 640 C60 520 140 460 200 470 C150 520 120 580 110 660 Z"/>
+        <path d="M380 560 C300 480 290 380 330 300 C350 380 380 440 400 470 Z"/>
+        <path d="M300 660 C290 560 230 520 170 540 C220 580 250 620 250 680 Z"/>
+        <path d="M-10 120 C60 140 100 200 100 280 C60 230 20 200 -20 200 Z"/>
+        <path d="M370 100 C310 130 280 190 290 260 C320 210 350 190 390 190 Z"/>
+        <path d="M180 600 C160 540 170 500 200 470 C210 510 205 560 180 600 Z"/>
+        <circle cx="70" cy="420" r="16"/><circle cx="300" cy="380" r="12"/><circle cx="250" cy="560" r="10"/>
+        <path d="M120 330 C140 300 175 292 200 300 C178 312 150 330 132 360 Z"/>
+        <path d="M250 300 C238 270 210 258 186 262 C206 278 228 296 238 326 Z"/>
+        <path d="M150 420 C170 380 210 372 236 384 C210 394 182 410 164 444 Z"/>
+        <path d="M95 250 C110 230 136 226 152 234 C134 242 116 254 104 274 Z"/>
+        <path d="M268 470 C250 440 218 434 196 442 C220 452 240 466 252 492 Z"/>
+        <g fill="none" stroke="#d9b8bf" stroke-width="5" stroke-linecap="round"><path d="M40 600 C90 560 130 560 170 590"/><path d="M330 240 C300 270 296 300 310 330"/><path d="M20 330 C60 340 80 370 84 400"/></g>
+      </g>
+    </svg>
+    <div class="flap" aria-hidden="true"><svg viewBox="0 0 360 300" preserveAspectRatio="none"><path d="M0 0 L180 230 L360 0 Z" fill="#e7cdd2" filter="url(#emboss)"/></svg></div>
+    <p class="dear" id="dear"></p>
+    <button class="seal" id="seal" aria-label="Break the seal to open"><span data-mono></span></button>
+    <p class="hint" data-i18n="tap"></p>
+  </div>
+</section>
+
+<div class="petals" id="petals" aria-hidden="true"></div>
+
+<!-- ============ INVITATION ============ -->
+<main class="page" id="page" hidden>
+  <div class="top-bar"><button class="pill" data-lang-toggle></button></div>
+
+  <header class="hero">
+    <div class="arch">
+      <img data-photo alt="">
+      <div class="mist"></div>
+      <div class="arch-content">
+        <div class="emblem"><span data-mono></span></div>
+        <p class="bismillah" id="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+        <p class="label" data-i18n="together"></p>
+        <h1 class="name" id="gName"></h1>
+        <p class="par" id="gParents"></p>
+        <p class="amp">&amp;</p>
+        <h1 class="name" id="bName"></h1>
+        <p class="par" id="bParents"></p>
+        <p class="msg" id="message"></p>
+        <p class="scroll-hint" data-i18n="scroll"></p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hanging date scroll + countdown -->
+  <section class="sec fade">
+    <div class="hang">
+      <div class="paper">
+        <p class="p-day" id="dDay"></p>
+        <p class="p-num" id="dNum"></p>
+        <p class="p-month" id="dMonth"></p>
+        <p class="p-year" id="dYear"></p>
+        <p class="p-where" id="dWhere"></p>
+      </div>
+      <div class="rod"><i></i></div>
+      <div class="tassel"><span></span></div>
+    </div>
+    <p class="see-you" id="seeYou"></p>
+    <div class="cd" id="cd">
+      <span><b data-cd="d">0</b><small data-i18n="days"></small></span>
+      <span><b data-cd="h">0</b><small data-i18n="hours"></small></span>
+      <span><b data-cd="m">0</b><small data-i18n="minutes"></small></span>
+      <span><b data-cd="s">0</b><small data-i18n="seconds"></small></span>
+    </div>
+    <p class="done" id="cdDone" hidden data-i18n="married"></p>
+    <button class="btn ghost" id="addCal" type="button">📅 <span data-i18n="addCal"></span></button>
+  </section>
+
+  <!-- Festivities coverflow -->
+  <section class="sec fade">
+    <p class="label" data-i18n="swipeTitle"></p>
+    <h2 class="title" data-i18n="festivities"></h2>
+    <div class="flow" id="flow"></div>
+    <div class="dots" id="dots"></div>
+    <p class="swipe-hint" data-i18n="swipeHint"></p>
+  </section>
+
+  <section class="sec fade" id="gallerySec" hidden>
+    <p class="label" data-i18n="moments"></p>
+    <div class="gallery" id="gallery"></div>
+  </section>
+
+  <section class="sec fade" id="rsvpSec">
+    <p class="label" data-i18n="rsvp"></p>
+    <h2 class="title" data-i18n="rsvpH"></h2>
+    <p class="msg small" id="deadline"></p>
+    <form class="rsvp" id="rsvpForm" novalidate>
+      <label><span data-i18n="yourName"></span><input id="rName" name="name" maxlength="60" autocomplete="name"></label>
+      <div class="choice">
+        <label><input type="radio" name="attending" value="yes" checked><span data-i18n="accept"></span></label>
+        <label><input type="radio" name="attending" value="no"><span data-i18n="decline"></span></label>
+      </div>
+      <label id="guestsWrap"><span data-i18n="guests"></span>
+        <select name="guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select>
+      </label>
+      <label><span data-i18n="wish"></span><textarea name="message" rows="3" maxlength="200"></textarea></label>
+      <button class="btn" type="submit" data-i18n="send"></button>
+      <p class="status" id="status" role="status"></p>
+    </form>
+  </section>
+
+  <section class="sec fade end">
+    <div class="contacts" id="contacts"></div>
+    <h2 class="title" data-i18n="thanks"></h2>
+    <p class="msg" id="closing"></p>
+    <p class="sign" id="sign"></p>
+    <p class="tag" id="hashtag"></p>
+    <p class="credit">Made with ♥ by <span id="brand"></span> · <span class="lipighor-credit">Web font: <a href="https://lipighor.com" target="_blank" rel="noopener">lipighor.com</a></span></p>
+  </section>
+</main>
+
+<div class="rotate-msg" data-i18n="rotate"></div>
+<script src="data.js"></script>
+<script src="../shared/media.js?v=2"></script>
+<script src="app.js?v=1"></script>
+</body>
+</html>
