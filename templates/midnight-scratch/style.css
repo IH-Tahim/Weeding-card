@@ -211,6 +211,7 @@ html[lang="bn"] .rsvp label > span { letter-spacing: .02em; font-size: 14px; tex
 html[lang="bn"] .sign { font-family: var(--bn); font-size: 24px; }
 .tag { font-family: var(--caps); letter-spacing: .15em; color: var(--muted); font-size: 14px; }
 .credit { margin-top: 30px; font-family: var(--ui); font-size: 12px; color: var(--muted); }
+.credit a { color: inherit; }
 
 .fade { opacity: 0; transform: translateY(24px); transition: opacity 1s ease, transform 1s ease; }
 .fade.in { opacity: 1; transform: none; }

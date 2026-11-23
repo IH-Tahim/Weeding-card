@@ -22,7 +22,15 @@ window.SITE = {
   tiktok: "",     // e.g. "https://tiktok.com/@shubhochithi"
 
   // Optional: Google Apps Script web-app URL (see order-google-sheet.gs) to save every order in a Google Sheet
-  orderSheetUrl: "",
+  orderSheetUrl: "https://script.google.com/macros/s/AKfycbxLSx6TEynazfyHznAksrSoYzit27FWWaSXGihziQNpF6WI-ZGbQeaK7mDFx696uCvxkw/exec",
+
+  // Website + ad tracking (see TRACKING.md). Leave an ID empty to switch that tool off.
+  tracking: {
+    metaPixel: "1121891047337408", // Meta Pixel / Dataset ID, digits only, e.g. "1234567890123456"
+    ga4: "G-CHZTM786PT", // Google Analytics 4 Measurement ID, e.g. "G-ABC123XYZ9"
+    tiktokPixel: "",  // TikTok Pixel ID, e.g. "CABCDEF1234567890"
+    debug: false      // true = print every event in the browser console (or add ?debug_track=1 to any page)
+  },
 
   // Prices in BDT
   packages: [

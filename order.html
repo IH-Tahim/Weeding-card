@@ -118,6 +118,18 @@
         <label class="f"><span><span class="bn">আপনার নাম</span><span class="en">Your name</span> *</span><input name="custName" required maxlength="60" autocomplete="name"></label>
         <label class="f"><span><span class="bn">WhatsApp নম্বর</span><span class="en">WhatsApp number</span> *</span><input name="custPhone" required maxlength="20" inputmode="tel" autocomplete="tel" placeholder="01XXXXXXXXX"></label>
       </div>
+      <label class="f"><span><span class="bn">আমাদের কোথায় পেলেন?</span><span class="en">How did you find us?</span></span>
+        <select name="heard">
+          <option value="">—</option>
+          <option value="Facebook">Facebook</option>
+          <option value="Instagram">Instagram</option>
+          <option value="TikTok">TikTok</option>
+          <option value="Saw a card at a wedding">বিয়ের কার্ডে দেখেছি / Saw a card at a wedding</option>
+          <option value="Friend or family">বন্ধু বা আত্মীয় / Friend or family</option>
+          <option value="Photographer or vendor">ফটোগ্রাফার বা ভেন্ডর / Photographer or vendor</option>
+          <option value="Google">Google</option>
+          <option value="Other">অন্যান্য / Other</option>
+        </select></label>
     </fieldset>
 
     <!-- 6. Payment -->
@@ -148,7 +160,7 @@
   </div>
 </main>
 
-<footer><div class="wrap"><div>© <span data-year>2026</span> Shubho Chithi · শুভ চিঠি · <span class="lipighor-credit">Web font: <a href="https://lipighor.com" target="_blank" rel="noopener">lipighor.com</a></span></div><nav><a href="./"><span class="bn">হোম</span><span class="en">Home</span></a></nav></div></footer>
+<footer><div class="wrap"><div>© <span data-year>2026</span> Shubho Chithi · শুভ চিঠি · <span class="lipighor-credit">Web font: <a href="https://lipighor.com" target="_blank" rel="noopener">lipighor.com</a></span></div><nav><a href="./"><span class="bn">হোম</span><span class="en">Home</span></a><a href="privacy.html"><span class="bn">গোপনীয়তা</span><span class="en">Privacy</span></a></nav></div></footer>
 
 <template id="eventTpl">
   <div class="event-box">
@@ -169,8 +181,9 @@
   <option value="Bou-bhat"><option value="Mehendi"><option value="Engagement"><option value="Ashirbad"><option value="Shubho Bibaho">
 </datalist>
 
-<script src="site-config.js?v=2"></script>
+<script src="site-config.js?v=6"></script>
 <script src="assets/site.js?v=1"></script>
-<script src="assets/order.js?v=2"></script>
+<script src="assets/track.js?v=1"></script>
+<script src="assets/order.js?v=4"></script>
 </body>
 </html>

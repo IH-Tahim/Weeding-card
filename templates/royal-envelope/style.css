@@ -267,6 +267,7 @@ html[lang="bn"] .rsvp label > span { letter-spacing: .03em; font-size: 13px; }
 html[lang="bn"] .thanks .signoff { font-family: var(--bangla); font-size: 26px; }
 .hashtag { font-family: var(--ui); letter-spacing: .12em; color: var(--muted); margin: 6px 0 24px; }
 .credit { text-align: center; font-family: var(--ui); font-size: 12px; color: var(--muted); padding: 10px 0 24px; }
+.credit a { color: inherit; }
 
 /* Reveal on scroll */
 .reveal { opacity: 0; transform: translateY(26px); transition: opacity .9s ease, transform .9s ease; }

@@ -11,6 +11,11 @@
   if (params.get("design")) { const o = $(`#design option[value="${CSS.escape(params.get("design"))}"]`); if (o) o.selected = true; }
   if (params.get("package")) { const r = form.querySelector(`input[name=package][value="${CSS.escape(params.get("package"))}"]`); if (r) r.checked = true; }
 
+  // ---------- Tracking ----------
+  const track = (n, p) => { try { window.SC.track && window.SC.track(n, p); } catch (x) {} };
+  let started = false; // "began checkout" fires once, on the first field the customer touches
+  form.addEventListener("focusin", () => { if (started) return; started = true; const c = calc(); track("order_start", { design: $("#design").value, package: c.pkg, value: c.total }); });
+
   // ---------- Events list ----------
   const evBox = $("#events"), tpl = $("#eventTpl");
   function addEvent(title) {
@@ -94,7 +99,7 @@
     });
 
     const now = new Date();
-    const orderId = "SC-" + now.toISOString().slice(2, 10).replace(/-/g, "") + "-" + Math.random().toString(36).slice(2, 6).toUpperCase();
+    const orderId = "SC-" + new Date(now.getTime() + 6 * 36e5).toISOString().slice(2, 10).replace(/-/g, "") + "-" /* date in Bangladesh time (UTC+6) */ + Math.random().toString(36).slice(2, 6).toUpperCase();
     const gEn = clean(f.groomEn), bEn = clean(f.brideEn), gBn = clean(f.groomBn), bBn = clean(f.brideBn);
     const faith = f.faith;
 
@@ -123,6 +128,10 @@
 
     // Human-readable WhatsApp message
     const fmtDate = (iso) => new Date(iso).toLocaleString("en-GB", { timeZone: "Asia/Dhaka", weekday: "short", day: "numeric", month: "short", year: "numeric", hour: "numeric", minute: "2-digit", hour12: true });
+    const src = window.SC.source ? window.SC.source() : "direct";
+    const firstSrc = window.SC.firstSource ? window.SC.firstSource() : src;
+    const heard = clean(f.heard);
+    const sourceLines = `\n\n📣 Found us: ${heard || "-"}\nLink source: ${src}${firstSrc !== src ? " (first visit: " + firstSrc + ")" : ""}`;
     const evLines = events.map((ev, i) => `${i + 1}. ${typeof ev.title === "object" ? ev.title.en : ev.title} — ${fmtDate(ev.start)}\n   ${ev.venue}${ev.address ? ", " + ev.address : ""}`).join("\n");
     const msg =
 `🧾 New order ${orderId}
@@ -142,9 +151,10 @@ Contacts: ${[f.contact1, f.contact2].map(clean).filter(Boolean).join(" | ") || "
 RSVP by: ${f.rsvpDeadline || "-"} · Music: ${f.music} · Hashtag: ${invite.hashtag}
 Notes: ${clean(f.notes) || "-"}
 
-👤 ${clean(f.custName)} · ${clean(ph)}`;
+👤 ${clean(f.custName)} · ${clean(ph)}${sourceLines}`;
 
     const wa = window.SC.wa(msg);
+    track("order_submit", { id: orderId, design: f.design, package: pkg, value: total });
     window.open(wa, "_blank", "noopener"); // must run inside the click, or browsers block it
     $("#waAgain").href = wa;
     $("#orderId").textContent = orderId;
@@ -155,7 +165,7 @@ Notes: ${clean(f.notes) || "-"}
       try {
         await fetch(S.orderSheetUrl, { method: "POST", mode: "no-cors", body: new URLSearchParams({
           orderId, customer: clean(f.custName), phone: clean(ph), package: pkg, design: f.design, addons: addons.join(", "),
-          total: String(total), payMethod: f.payMethod, trxId: clean(f.trxId), summary: msg, dataJs
+          total: String(total), payMethod: f.payMethod, trxId: clean(f.trxId), heard, source: src, firstSource: firstSrc, summary: msg, dataJs
         }) });
       } catch (x) { /* WhatsApp message already has everything */ }
     }
