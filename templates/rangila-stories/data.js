@@ -92,6 +92,145 @@ window.INVITE = {
   music: "",
   musicEnabled: true, // false = no music at all
 
+  // Extra sections (all optional). Delete any block you don't want; the calendar + Bangla date show automatically.
+  // icons: ring heart plate camera music car door tea chat home star moon flower gift bed
+  extras: {
+    schedule: [
+      {
+        time: {
+          en: "6:30 PM",
+          bn: "সন্ধ্যা ৬:৩০"
+        },
+        title: {
+          en: "Guests arrive",
+          bn: "অতিথি আগমন"
+        },
+        icon: "door"
+      },
+      {
+        time: {
+          en: "7:00 PM",
+          bn: "সন্ধ্যা ৭:০০"
+        },
+        title: {
+          en: "Bride & groom arrive",
+          bn: "বর-কনের আগমন"
+        },
+        icon: "heart"
+      },
+      {
+        time: {
+          en: "7:30 PM",
+          bn: "সন্ধ্যা ৭:৩০"
+        },
+        title: {
+          en: "Akdh & dua",
+          bn: "আকদ ও দোয়া"
+        },
+        icon: "ring"
+      },
+      {
+        time: {
+          en: "8:30 PM",
+          bn: "রাত ৮:৩০"
+        },
+        title: {
+          en: "Dinner",
+          bn: "প্রীতিভোজ"
+        },
+        icon: "plate"
+      },
+      {
+        time: {
+          en: "9:30 PM",
+          bn: "রাত ৯:৩০"
+        },
+        title: {
+          en: "Photo session",
+          bn: "ফটোসেশন"
+        },
+        icon: "camera"
+      },
+      {
+        time: {
+          en: "10:30 PM",
+          bn: "রাত ১০:৩০"
+        },
+        title: {
+          en: "Farewell",
+          bn: "বিদায়"
+        },
+        icon: "moon"
+      }
+    ],
+    dress: {
+      note: {
+        en: "The brighter the better!",
+        bn: "যত রঙিন, তত ভালো!"
+      },
+      colors: [
+        {
+          name: {
+            en: "Rani pink",
+            bn: "রানি গোলাপি"
+          },
+          hex: "#e91e63"
+        },
+        {
+          name: {
+            en: "Haldi yellow",
+            bn: "হলুদ"
+          },
+          hex: "#f9a825"
+        },
+        {
+          name: {
+            en: "Parrot green",
+            bn: "টিয়া সবুজ"
+          },
+          hex: "#2e9e4f"
+        },
+        {
+          name: {
+            en: "Orange",
+            bn: "কমলা"
+          },
+          hex: "#ef6c00"
+        }
+      ]
+    },
+    menu: [
+      {
+        en: "Kacchi biryani",
+        bn: "কাচ্চি বিরিয়ানি"
+      },
+      {
+        en: "Chicken roast",
+        bn: "মুরগির রোস্ট"
+      },
+      {
+        en: "Mutton rezala",
+        bn: "খাসির রেজালা"
+      },
+      {
+        en: "Jali kabab",
+        bn: "জালি কাবাব"
+      },
+      {
+        en: "Borhani",
+        bn: "বোরহানি"
+      },
+      {
+        en: "Firni & jorda",
+        bn: "ফিরনি ও জর্দা"
+      },
+      {
+        en: "Mishti doi",
+        bn: "মিষ্টি দই"
+      }
+    ]
+  },
+
   closing: {
     en: "Your presence and prayers will make our day complete.",
     bn: "আপনার উপস্থিতি ও দোয়া আমাদের দিনটিকে পরিপূর্ণ করবে।"

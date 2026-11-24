@@ -13,7 +13,7 @@
       weds: "weds", tapNext: "Tap to continue →", families: "Our families", groom: "The Groom", bride: "The Bride",
       event: "Event", directions: "📍 Directions", calendar: "📅 Save date",
       countdown: "Counting down", days: "Days", hours: "Hours", minutes: "Min", seconds: "Sec", married: "Happily married! 🎉",
-      memories: "Our moments", rsvpH: "Will you come?", replyBy: "Please reply by",
+      memories: "Our moments", details: "Good to know", rsvpH: "Will you come?", replyBy: "Please reply by",
       yourName: "Your name", accept: "Yes, coming!", decline: "Sorry, can't", guests: "How many guests?",
       note: "Your wishes (optional)", send: "Send reply", sending: "Sending…", sent: "Thank you! Reply sent 💛",
       needName: "Please write your name.", openedWa: "WhatsApp opened — press send there.",
@@ -25,7 +25,7 @@
       weds: "ও", tapNext: "পরের পাতায় যেতে চাপ দিন →", families: "আমাদের পরিবার", groom: "বর", bride: "কনে",
       event: "অনুষ্ঠান", directions: "📍 লোকেশন", calendar: "📅 তারিখ সেভ",
       countdown: "আর মাত্র", days: "দিন", hours: "ঘণ্টা", minutes: "মিনিট", seconds: "সেকেন্ড", married: "শুভ বিবাহ সম্পন্ন! 🎉",
-      memories: "আমাদের মুহূর্ত", rsvpH: "আপনি আসছেন তো?", replyBy: "উত্তর দেওয়ার শেষ তারিখ",
+      memories: "আমাদের মুহূর্ত", details: "বিস্তারিত", rsvpH: "আপনি আসছেন তো?", replyBy: "উত্তর দেওয়ার শেষ তারিখ",
       yourName: "আপনার নাম", accept: "অবশ্যই আসব!", decline: "আসতে পারছি না", guests: "কতজন আসবেন?",
       note: "শুভেচ্ছা বার্তা (ঐচ্ছিক)", send: "উত্তর পাঠান", sending: "পাঠানো হচ্ছে…", sent: "ধন্যবাদ! উত্তর পৌঁছে গেছে 💛",
       needName: "অনুগ্রহ করে আপনার নাম লিখুন।", openedWa: "হোয়াটসঅ্যাপ খুলেছে — সেখানে সেন্ড চাপুন।",
@@ -141,7 +141,14 @@
       ));
     }
 
-    // 6. RSVP
+    // 6. Details: shared sections (calendar + Bangla date, programme, dress code, menu, gifts, FAQ…)
+    if (window.SC && SC.extrasSections && SC.extrasSections.length) {
+      const box = h("div", { class: "xs-host pop", i: 1 });
+      SC.mountExtras(box);
+      add(h("section", { class: "details" }, pop(0, "p", "kicker", s("details")), box), true);
+    }
+
+    // 7. RSVP
     if (D.rsvp && D.rsvp.enabled) {
       const form = h("form", { class: "rsvp pop", i: 2, novalidate: "" },
         h("label", null, h("span", { text: s("yourName") }), h("input", { name: "name", maxlength: "60", autocomplete: "name", value: guest })),
@@ -161,7 +168,7 @@
       ), true);
     }
 
-    // 7. Thanks
+    // 8. Thanks
     add(h("section", null,
       pop(0, "div", "heart", "💐"),
       pop(1, "h2", "h2", s("thanks")),
@@ -199,7 +206,7 @@
   $("#bars").addEventListener("animationend", () => { if (!slides[cur].stay) go(cur + 1); });
 
   const stage = $("#stage");
-  const interactive = (el) => (el && el.closest ? el.closest("a,button,input,select,textarea,label,form") : null);
+  const interactive = (el) => (el && el.closest ? el.closest("a,button,input,select,textarea,label,form,summary,details,.xs-host") : null);
   let down = null;
   stage.addEventListener("pointerdown", (e) => {
     if (interactive(e.target)) return;

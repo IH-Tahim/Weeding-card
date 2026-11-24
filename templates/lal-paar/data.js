@@ -92,6 +92,145 @@ window.INVITE = {
   music: "",
   musicEnabled: true,
 
+  // Extra sections (all optional). Delete any block you don't want; the calendar + Bangla date show automatically.
+  // icons: ring heart plate camera music car door tea chat home star moon flower gift bed
+  extras: {
+    schedule: [
+      {
+        time: {
+          en: "6:00 PM",
+          bn: "সন্ধ্যা ৬:০০"
+        },
+        title: {
+          en: "Baraat arrives",
+          bn: "বরযাত্রী আগমন"
+        },
+        icon: "car"
+      },
+      {
+        time: {
+          en: "7:00 PM",
+          bn: "সন্ধ্যা ৭:০০"
+        },
+        title: {
+          en: "Shubho drishti",
+          bn: "শুভদৃষ্টি"
+        },
+        icon: "heart"
+      },
+      {
+        time: {
+          en: "7:30 PM",
+          bn: "সন্ধ্যা ৭:৩০"
+        },
+        title: {
+          en: "Mala badal & saat paak",
+          bn: "মালাবদল ও সাত পাক"
+        },
+        icon: "flower"
+      },
+      {
+        time: {
+          en: "8:30 PM",
+          bn: "রাত ৮:৩০"
+        },
+        title: {
+          en: "Sindoor daan",
+          bn: "সিঁদুর দান"
+        },
+        icon: "ring"
+      },
+      {
+        time: {
+          en: "9:00 PM",
+          bn: "রাত ৯:০০"
+        },
+        title: {
+          en: "Dinner",
+          bn: "প্রীতিভোজ"
+        },
+        icon: "plate"
+      },
+      {
+        time: {
+          en: "10:30 PM",
+          bn: "রাত ১০:৩০"
+        },
+        title: {
+          en: "Photo session",
+          bn: "ফটোসেশন"
+        },
+        icon: "camera"
+      }
+    ],
+    dress: {
+      note: {
+        en: "Red & white, the colours of lal paar",
+        bn: "লাল পাড়ের রঙে — লাল আর সাদা"
+      },
+      colors: [
+        {
+          name: {
+            en: "Red",
+            bn: "লাল"
+          },
+          hex: "#b3141c"
+        },
+        {
+          name: {
+            en: "White",
+            bn: "সাদা"
+          },
+          hex: "#fbf7f0"
+        },
+        {
+          name: {
+            en: "Gold",
+            bn: "সোনালি"
+          },
+          hex: "#c9a24f"
+        },
+        {
+          name: {
+            en: "Marigold",
+            bn: "গাঁদা"
+          },
+          hex: "#f39c12"
+        }
+      ]
+    },
+    menu: [
+      {
+        en: "Luchi & cholar dal",
+        bn: "লুচি ও ছোলার ডাল"
+      },
+      {
+        en: "Basanti pulao",
+        bn: "বাসন্তী পোলাও"
+      },
+      {
+        en: "Rui kalia",
+        bn: "রুই মাছের কালিয়া"
+      },
+      {
+        en: "Mutton kosha",
+        bn: "খাসির মাংস কষা"
+      },
+      {
+        en: "Chutney & papad",
+        bn: "চাটনি ও পাঁপড়"
+      },
+      {
+        en: "Rosogolla",
+        bn: "রসগোল্লা"
+      },
+      {
+        en: "Mishti doi",
+        bn: "মিষ্টি দই"
+      }
+    ]
+  },
+
   closing: {
     en: "Your presence and blessings will make this auspicious day complete.",
     bn: "আপনার শুভ উপস্থিতি ও আশীর্বাদ এই শুভদিনকে পরিপূর্ণ করবে।"

@@ -92,6 +92,177 @@ window.INVITE = {
   music: "",
   musicEnabled: true, // false = no music at all
 
+  // Extra sections (all optional). Delete any block you don't want; the calendar + Bangla date show automatically.
+  // icons: ring heart plate camera music car door tea chat home star moon flower gift bed
+  extras: {
+    schedule: [
+      {
+        time: {
+          en: "6:30 PM",
+          bn: "সন্ধ্যা ৬:৩০"
+        },
+        title: {
+          en: "Guests arrive",
+          bn: "অতিথি আগমন"
+        },
+        icon: "door"
+      },
+      {
+        time: {
+          en: "7:00 PM",
+          bn: "সন্ধ্যা ৭:০০"
+        },
+        title: {
+          en: "Bride & groom arrive",
+          bn: "বর-কনের আগমন"
+        },
+        icon: "heart"
+      },
+      {
+        time: {
+          en: "7:30 PM",
+          bn: "সন্ধ্যা ৭:৩০"
+        },
+        title: {
+          en: "Akdh & dua",
+          bn: "আকদ ও দোয়া"
+        },
+        icon: "ring"
+      },
+      {
+        time: {
+          en: "8:30 PM",
+          bn: "রাত ৮:৩০"
+        },
+        title: {
+          en: "Dinner",
+          bn: "প্রীতিভোজ"
+        },
+        icon: "plate"
+      },
+      {
+        time: {
+          en: "9:30 PM",
+          bn: "রাত ৯:৩০"
+        },
+        title: {
+          en: "Photo session",
+          bn: "ফটোসেশন"
+        },
+        icon: "camera"
+      },
+      {
+        time: {
+          en: "10:30 PM",
+          bn: "রাত ১০:৩০"
+        },
+        title: {
+          en: "Farewell",
+          bn: "বিদায়"
+        },
+        icon: "moon"
+      }
+    ],
+    dress: {
+      note: {
+        en: "Come dressed in our wedding colours",
+        bn: "আমাদের বিয়ের রঙে সেজে আসুন"
+      },
+      colors: [
+        {
+          name: {
+            en: "Maroon",
+            bn: "মেরুন"
+          },
+          hex: "#7a1f2b"
+        },
+        {
+          name: {
+            en: "Gold",
+            bn: "সোনালি"
+          },
+          hex: "#c9a24f"
+        },
+        {
+          name: {
+            en: "Ivory",
+            bn: "আইভরি"
+          },
+          hex: "#f4ecdc"
+        },
+        {
+          name: {
+            en: "Emerald",
+            bn: "পান্না সবুজ"
+          },
+          hex: "#1f5b4a"
+        }
+      ]
+    },
+    menu: [
+      {
+        en: "Kacchi biryani",
+        bn: "কাচ্চি বিরিয়ানি"
+      },
+      {
+        en: "Chicken roast",
+        bn: "মুরগির রোস্ট"
+      },
+      {
+        en: "Mutton rezala",
+        bn: "খাসির রেজালা"
+      },
+      {
+        en: "Jali kabab",
+        bn: "জালি কাবাব"
+      },
+      {
+        en: "Borhani",
+        bn: "বোরহানি"
+      },
+      {
+        en: "Firni & jorda",
+        bn: "ফিরনি ও জর্দা"
+      },
+      {
+        en: "Mishti doi",
+        bn: "মিষ্টি দই"
+      }
+    ],
+    faq: [
+      {
+        q: {
+          en: "Is there parking?",
+          bn: "পার্কিং আছে কি?"
+        },
+        a: {
+          en: "Yes, free parking in the venue basement.",
+          bn: "হ্যাঁ, ভেন্যুর বেসমেন্টে ফ্রি পার্কিং আছে।"
+        }
+      },
+      {
+        q: {
+          en: "Can we bring children?",
+          bn: "শিশুদের আনা যাবে?"
+        },
+        a: {
+          en: "Of course! There will be a play corner for them.",
+          bn: "অবশ্যই! ওদের জন্য খেলার জায়গা থাকবে।"
+        }
+      },
+      {
+        q: {
+          en: "When will it end?",
+          bn: "অনুষ্ঠান কখন শেষ হবে?"
+        },
+        a: {
+          en: "Around 11 PM.",
+          bn: "রাত ১১টার মধ্যে।"
+        }
+      }
+    ]
+  },
+
   closing: {
     en: "Your presence and prayers will make our day complete.",
     bn: "আপনার উপস্থিতি ও দোয়া আমাদের দিনটিকে পরিপূর্ণ করবে।"

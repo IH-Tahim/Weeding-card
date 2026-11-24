@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wedding Invitation</title>
+<meta name="description" content="Open the palace window to see your wedding invitation.">
+<meta property="og:title" content="A royal invitation 🕌">
+<meta property="og:description" content="Open the palace window to see your wedding invitation.">
+<meta name="theme-color" content="#f3efe7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri&family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Hind+Siliguri:wght@400;500;600&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../fonts/lipighor.css?v=2">
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body class="locked">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <pattern id="jali" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M14 1 L18 10 L27 14 L18 18 L14 27 L10 18 L1 14 L10 10Z" fill="none" stroke="#c9a24f" stroke-width="1.4"/>
+      <circle cx="14" cy="14" r="2.4" fill="none" stroke="#c9a24f" stroke-width="1"/>
+      <path d="M0 0 L5 5 M28 0 L23 5 M0 28 L5 23 M28 28 L23 23" stroke="#c9a24f" stroke-width="1.2"/>
+    </pattern>
+    <clipPath id="archClip" clipPathUnits="objectBoundingBox">
+      <path d="M0.05 1 V0.47 C0.05 0.4 0.1 0.37 0.15 0.35 C0.12 0.29 0.17 0.23 0.25 0.22 C0.26 0.15 0.33 0.11 0.42 0.11 C0.45 0.06 0.5 0.02 0.5 0.02 C0.5 0.02 0.55 0.06 0.58 0.11 C0.67 0.11 0.74 0.15 0.75 0.22 C0.83 0.23 0.88 0.29 0.85 0.35 C0.9 0.37 0.95 0.4 0.95 0.47 V1Z"/>
+    </clipPath>
+  </defs>
+  <symbol id="inlay" viewBox="0 0 120 30"><g fill="none" stroke-linecap="round">
+    <path d="M6 15 H44 M76 15 H114" stroke="#c9a24f" stroke-width="1.2"/>
+    <circle cx="60" cy="15" r="5" fill="#8e1b2c"/><g fill="#16594a"><ellipse cx="48" cy="15" rx="6" ry="2.6"/><ellipse cx="72" cy="15" rx="6" ry="2.6"/></g>
+    <g fill="#c9a24f"><circle cx="60" cy="6" r="2"/><circle cx="60" cy="24" r="2"/></g></g></symbol>
+</svg>
+
+<!-- ============ OPENING: the palace window ============ -->
+<section class="intro" id="intro">
+  <button class="pill lang-pos" data-lang-toggle></button>
+  <p class="dear" data-f="dear"></p>
+  <div class="window" id="window">
+    <div class="glow" aria-hidden="true"><span data-f="mono"></span></div>
+    <div class="shutter left" aria-hidden="true"><svg preserveAspectRatio="none"><rect width="100%" height="100%" fill="url(#jali)"/></svg></div>
+    <div class="shutter right" aria-hidden="true"><svg preserveAspectRatio="none"><rect width="100%" height="100%" fill="url(#jali)"/></svg></div>
+    <svg class="frame" viewBox="0 0 200 300" preserveAspectRatio="none" aria-hidden="true"><path d="M10 300 V141 C10 120 20 111 30 105 C24 87 34 69 50 66 C52 45 66 33 84 33 C90 18 100 6 100 6 C100 6 110 18 116 33 C134 33 148 45 150 66 C166 69 176 87 170 105 C180 111 190 120 190 141 V300" fill="none" stroke="#c9a24f" stroke-width="5"/><path d="M18 300 V143 C18 125 27 117 36 112 C31 95 40 80 54 76 C56 58 69 47 86 47 C91 34 100 22 100 22 C100 22 109 34 114 47 C131 47 144 58 146 76 C160 80 169 95 164 112 C173 117 182 125 182 143 V300" fill="none" stroke="#8e1b2c" stroke-width="2"/></svg>
+  </div>
+  <button class="open-btn" id="openBtn"><span data-i18n="openWindow"></span></button>
+</section>
+
+<!-- ============ INVITATION ============ -->
+<main class="page" id="page" hidden>
+  <div class="top-bar"><button class="pill" data-lang-toggle></button></div>
+
+  <header class="hero sec">
+    <div class="arch-frame">
+      <div class="arch-in">
+        <p class="bismillah" data-show="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+        <p class="label" data-i18n="together"></p>
+        <h1 class="name" data-f="gShort"></h1>
+        <p class="cred" data-show="gTitle" data-f="gTitle"></p>
+        <p class="par" data-f="gParents"></p>
+        <p class="amp" data-i18n="weds"></p>
+        <h1 class="name" data-f="bShort"></h1>
+        <p class="cred" data-show="bTitle" data-f="bTitle"></p>
+        <p class="par" data-f="bParents"></p>
+      </div>
+    </div>
+    <svg class="inlay" aria-hidden="true"><use href="#inlay"/></svg>
+    <p class="msg" data-f="message"></p>
+  </header>
+
+  <section class="sec fade">
+    <p class="label" data-i18n="saveDate"></p>
+    <div class="date-row">
+      <span data-date="weekday"></span>
+      <b data-date="day"></b>
+      <span><span data-date="month"></span> <span data-date="year"></span></span>
+    </div>
+    <p class="d-sub"><span data-date="time"></span> · <span data-date="bangla"></span></p>
+    <div class="cd" data-cd-wrap>
+      <span><b data-cd="d">0</b><small data-i18n="days"></small></span>
+      <span><b data-cd="h">00</b><small data-i18n="hours"></small></span>
+      <span><b data-cd="m">00</b><small data-i18n="minutes"></small></span>
+      <span><b data-cd="s">00</b><small data-i18n="seconds"></small></span>
+    </div>
+    <p class="done" data-cd-done hidden data-i18n="married"></p>
+    <button class="btn" data-cal-main type="button" data-i18n="addCal"></button>
+  </section>
+
+  <section class="sec fade">
+    <svg class="inlay" aria-hidden="true"><use href="#inlay"/></svg>
+    <p class="label" data-i18n="events"></p>
+    <h2 class="title" data-i18n="eventsH"></h2>
+    <div class="arcade" data-events>
+      <template>
+        <article class="arch-card">
+          <span class="ac-ic" data-ev="icon"></span>
+          <h3 data-ev="title"></h3>
+          <p class="ac-date"><span data-ev="weekday"></span><br><b data-ev="date"></b></p>
+          <p class="ac-time" data-ev="time"></p>
+          <p class="ac-venue"><span data-ev="venue"></span><br><small data-ev="address"></small></p>
+          <p class="ac-dress" data-ev-dress-wrap><span data-ev-dress></span></p>
+          <div class="ac-acts"><a data-ev-map></a><button type="button" data-ev-cal></button></div>
+        </article>
+      </template>
+    </div>
+  </section>
+
+  <section class="sec fade">
+    <figure class="photo"><img data-photo alt=""></figure>
+  </section>
+
+  <section class="sec fade" data-show="gallery">
+    <p class="label" data-i18n="moments"></p>
+    <div class="gallery" data-gallery></div>
+  </section>
+
+  <section class="sec fade" id="rsvpSec" data-show="rsvp">
+    <svg class="inlay" aria-hidden="true"><use href="#inlay"/></svg>
+    <p class="label" data-i18n="rsvp"></p>
+    <h2 class="title" data-i18n="rsvpH"></h2>
+    <p class="note" data-deadline></p>
+    <form class="rsvp" id="rsvpForm" novalidate>
+      <label><span data-i18n="yourName"></span><input name="name" maxlength="60" autocomplete="name"></label>
+      <div class="choice">
+        <label><input type="radio" name="attending" value="yes" checked><span data-i18n="accept"></span></label>
+        <label><input type="radio" name="attending" value="no"><span data-i18n="decline"></span></label>
+      </div>
+      <label data-guests><span data-i18n="guests"></span>
+        <select name="guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select>
+      </label>
+      <label><span data-i18n="wish"></span><textarea name="message" rows="3" maxlength="200"></textarea></label>
+      <button class="btn" type="submit" data-i18n="send"></button>
+      <p class="status" role="status"></p>
+    </form>
+  </section>
+
+  <section class="sec fade end">
+    <div class="contacts" data-contacts></div>
+    <h2 class="title" data-i18n="thanks"></h2>
+    <p class="msg" data-f="closing"></p>
+    <p class="name small" data-f="couple"></p>
+    <p class="hash" data-f="hashtag"></p>
+    <p class="credit">Made with ♥ by <a id="brand" data-f="brand" href="https://shubhochithi.com/?ref=card" target="_blank" rel="noopener"></a> · <span class="lipighor-credit">Web font: <a href="https://lipighor.com" target="_blank" rel="noopener">lipighor.com</a></span></p>
+  </section>
+</main>
+
+<script src="data.js"></script>
+<script src="../shared/media.js?v=2"></script>
+<script src="../shared/extras.js?v=2"></script>
+<script src="../shared/core.js?v=2"></script>
+<script src="app.js?v=1"></script>
+</body>
+</html>

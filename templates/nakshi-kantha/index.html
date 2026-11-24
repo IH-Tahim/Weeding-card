@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>বিয়ের নিমন্ত্রণ</title>
+<meta name="description" content="সুঁই-সুতোয় বোনা বিয়ের নিমন্ত্রণ — খুলতে সুতোর নাটাইয়ে চাপ দিন।">
+<meta property="og:title" content="সুঁই-সুতোয় বোনা নিমন্ত্রণ 🪡">
+<meta property="og:description" content="A wedding invitation stitched like a nakshi kantha.">
+<meta name="theme-color" content="#f6efe2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri&family=Hind+Siliguri:wght@400;500;600&family=Kalam:wght@400;700&family=Tiro+Bangla&family=Yatra+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../fonts/lipighor.css?v=2">
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body class="locked">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="fish" viewBox="0 0 80 40"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-dasharray="4 3.5" stroke-linecap="round"><path d="M6 20 C18 4 46 2 62 20 C46 38 18 36 6 20Z"/><path d="M62 20 L76 8 L74 32Z"/><circle cx="20" cy="18" r="3"/><path d="M32 12 C38 18 38 24 32 28"/><path d="M42 11 C48 18 48 24 42 29"/></g></symbol>
+  <symbol id="bird" viewBox="0 0 80 50"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-dasharray="4 3.5" stroke-linecap="round"><path d="M10 30 C20 10 50 8 62 22 C66 26 74 26 78 22 C74 34 64 40 48 40 C30 40 16 38 10 30Z"/><path d="M30 26 C36 14 50 12 56 20"/><circle cx="64" cy="24" r="1.5"/><path d="M14 32 L2 40 M16 34 L6 46"/></g></symbol>
+  <symbol id="kalka" viewBox="0 0 60 80"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-dasharray="4 3.5" stroke-linecap="round"><path d="M30 76 C6 70 2 40 18 24 C30 12 50 14 52 30 C54 44 40 50 34 42 C30 36 36 30 40 34"/><path d="M28 64 C16 58 14 42 22 32"/><circle cx="36" cy="40" r="3"/></g></symbol>
+  <symbol id="leaf" viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-dasharray="4 3.5" stroke-linecap="round"><path d="M4 36 C4 14 18 4 36 4 C36 24 24 36 4 36Z"/><path d="M6 34 L30 10"/></g></symbol>
+</svg>
+
+<!-- ============ OPENING: the lotus gets stitched ============ -->
+<section class="intro" id="intro">
+  <button class="pill lang-pos" data-lang-toggle></button>
+  <p class="dear" data-f="dear"></p>
+  <div class="hoop">
+    <svg class="lotus" id="lotus" viewBox="-110 -110 220 220" aria-hidden="true"></svg>
+    <svg class="needle" id="needle" viewBox="0 0 60 60" aria-hidden="true"><path d="M8 52 L50 10" stroke="#8b8f98" stroke-width="3" stroke-linecap="round"/><ellipse cx="47" cy="13" rx="3" ry="1.4" transform="rotate(-45 47 13)" fill="none" stroke="#5c606a" stroke-width="1.2"/><path d="M47 13 C30 8 20 30 6 26" fill="none" stroke="#b3261e" stroke-width="1.6"/></svg>
+  </div>
+  <button class="spool" id="spool" aria-label="Open the invitation">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="14" y="8" width="36" height="8" rx="3" fill="#a0703a"/><rect x="14" y="48" width="36" height="8" rx="3" fill="#a0703a"/><rect x="18" y="16" width="28" height="32" fill="#b3261e"/><g stroke="#8c1c16" stroke-width="1.4"><path d="M18 20 H46 M18 25 H46 M18 30 H46 M18 35 H46 M18 40 H46 M18 45 H46"/></g></svg>
+    <span data-i18n="openStitch"></span>
+  </button>
+</section>
+
+<!-- ============ INVITATION ============ -->
+<main class="page" id="page" hidden>
+  <div class="top-bar"><button class="pill" data-lang-toggle></button></div>
+
+  <header class="hero sec">
+    <div class="frame">
+      <p class="bismillah" data-show="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+      <svg class="orn" aria-hidden="true"><use href="#bird"/></svg>
+      <p class="kicker" data-i18n="shubho"></p>
+      <h1 class="name"><span data-f="gShort"></span></h1>
+      <p class="par" data-f="gParents"></p>
+      <p class="weds" data-i18n="weds"></p>
+      <h1 class="name"><span data-f="bShort"></span></h1>
+      <p class="par" data-f="bParents"></p>
+      <p class="msg" data-f="message"></p>
+      <div class="date-band">
+        <span data-date="weekday"></span>
+        <b data-date="date"></b>
+        <span data-date="bangla"></span>
+      </div>
+    </div>
+  </header>
+
+  <section class="sec fade">
+    <svg class="orn" aria-hidden="true"><use href="#fish"/></svg>
+    <p class="label" data-i18n="events"></p>
+    <h2 class="title" data-i18n="eventsH"></h2>
+    <div class="patches" data-events>
+      <template>
+        <article class="patch">
+          <span class="p-ic" data-ev="icon"></span>
+          <h3 data-ev="title"></h3>
+          <p class="p-date"><b data-ev="weekday"></b> · <span data-ev="date"></span></p>
+          <p class="p-bd" data-ev="bangla"></p>
+          <p class="p-time" data-ev="time"></p>
+          <p class="p-venue"><span data-ev="venue"></span><br><small data-ev="address"></small></p>
+          <p class="p-dress" data-ev-dress-wrap>👗 <span data-ev-dress></span></p>
+          <div class="p-acts"><a class="venue-link" data-ev-map></a><button type="button" data-ev-cal></button></div>
+        </article>
+      </template>
+    </div>
+  </section>
+
+  <section class="sec fade">
+    <figure class="photo"><img data-photo alt=""></figure>
+  </section>
+
+  <section class="sec fade">
+    <svg class="orn" aria-hidden="true"><use href="#kalka"/></svg>
+    <p class="label" data-i18n="saveDate"></p>
+    <h2 class="title" data-i18n="countdown"></h2>
+    <div class="cd" data-cd-wrap>
+      <span><b data-cd="d">0</b><small data-i18n="days"></small></span>
+      <span><b data-cd="h">00</b><small data-i18n="hours"></small></span>
+      <span><b data-cd="m">00</b><small data-i18n="minutes"></small></span>
+      <span><b data-cd="s">00</b><small data-i18n="seconds"></small></span>
+    </div>
+    <p class="done" data-cd-done hidden data-i18n="married"></p>
+    <button class="btn" data-cal-main type="button">📅 <span data-i18n="addCal"></span></button>
+  </section>
+
+  <section class="sec fade" data-show="gallery">
+    <p class="label" data-i18n="moments"></p>
+    <div class="gallery" data-gallery></div>
+  </section>
+
+  <section class="sec fade" id="rsvpSec" data-show="rsvp">
+    <p class="label" data-i18n="rsvp"></p>
+    <h2 class="title" data-i18n="rsvpH"></h2>
+    <p class="note" data-deadline></p>
+    <form class="rsvp" id="rsvpForm" novalidate>
+      <label><span data-i18n="yourName"></span><input name="name" maxlength="60" autocomplete="name"></label>
+      <div class="choice">
+        <label><input type="radio" name="attending" value="yes" checked><span data-i18n="accept"></span></label>
+        <label><input type="radio" name="attending" value="no"><span data-i18n="decline"></span></label>
+      </div>
+      <label data-guests><span data-i18n="guests"></span>
+        <select name="guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select>
+      </label>
+      <label><span data-i18n="wish"></span><textarea name="message" rows="3" maxlength="200"></textarea></label>
+      <button class="btn" type="submit" data-i18n="send"></button>
+      <p class="status" role="status"></p>
+    </form>
+  </section>
+
+  <section class="sec fade end">
+    <svg class="orn" aria-hidden="true"><use href="#leaf"/></svg>
+    <div class="contacts" data-contacts></div>
+    <h2 class="title" data-i18n="thanks"></h2>
+    <p class="msg" data-f="closing"></p>
+    <p class="name small" data-f="couple"></p>
+    <p class="tag" data-f="hashtag"></p>
+    <p class="credit">Made with ♥ by <a id="brand" data-f="brand" href="https://shubhochithi.com/?ref=card" target="_blank" rel="noopener"></a> · <span class="lipighor-credit">Web font: <a href="https://lipighor.com" target="_blank" rel="noopener">lipighor.com</a></span></p>
+  </section>
+</main>
+
+<script src="data.js"></script>
+<script src="../shared/media.js?v=2"></script>
+<script src="../shared/extras.js?v=2"></script>
+<script src="../shared/core.js?v=2"></script>
+<script src="app.js?v=1"></script>
+</body>
+</html>

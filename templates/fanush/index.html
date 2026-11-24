@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wedding Invitation</title>
+<meta name="description" content="Release the lantern to open your wedding invitation.">
+<meta property="og:title" content="A night of lanterns 🏮">
+<meta property="og:description" content="Release the lantern to open your wedding invitation.">
+<meta name="theme-color" content="#1b2350">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Hind+Siliguri:wght@400;500;600&family=Italiana&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../fonts/lipighor.css?v=2">
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body class="locked">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="65%" r="60%"><stop offset="0" stop-color="#fff3c4"/><stop offset=".45" stop-color="#ffb347"/><stop offset="1" stop-color="#d9531e"/></radialGradient>
+  </defs>
+  <symbol id="lantern" viewBox="0 0 60 80">
+    <path d="M12 8 C8 30 10 56 18 70 L42 70 C50 56 52 30 48 8 C40 2 20 2 12 8Z" fill="url(#glow)"/>
+    <path d="M18 70 L42 70 L40 76 L20 76Z" fill="#7a2e12"/>
+    <path d="M30 4 C26 26 26 50 30 70 M20 8 C16 30 18 54 24 70 M40 8 C44 30 42 54 36 70" fill="none" stroke="rgba(150,60,20,.35)" stroke-width="1.2"/>
+    <ellipse cx="30" cy="73" rx="5" ry="2.4" fill="#fff6c8"/>
+  </symbol>
+</svg>
+
+<div class="sky" id="sky" aria-hidden="true"><div class="stars"></div><div class="lanterns" id="lanterns"></div></div>
+
+<!-- ============ OPENING: dusk over the river ============ -->
+<section class="intro" id="intro">
+  <button class="pill lang-pos" data-lang-toggle></button>
+  <p class="dear" data-f="dear"></p>
+  <h1 class="intro-names"><span data-f="gShort"></span> <em>&amp;</em> <span data-f="bShort"></span></h1>
+  <p class="intro-date" data-date="date"></p>
+  <svg class="river" viewBox="0 0 400 200" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <path d="M0 80 C60 70 90 76 130 72 C170 68 210 78 250 74 C300 70 340 78 400 72 L400 200 L0 200Z" fill="#1a1d3a"/>
+    <g fill="#141631"><path d="M40 72 l4 -26 l6 26z"/><path d="M52 72 l3 -18 l5 18z"/><path d="M300 74 l5 -30 l7 30z"/><path d="M316 74 l3 -20 l5 20z"/><rect x="0" y="66" width="400" height="10"/></g>
+    <g fill="#0f1128"><path d="M110 120 C140 130 190 130 220 120 L212 128 C190 134 140 134 118 128Z"/><path d="M166 120 L166 92 L188 118Z" fill="#20244a"/></g>
+    <g stroke="rgba(255,190,110,.35)" stroke-width="2" stroke-linecap="round"><path d="M150 150 H250"/><path d="M170 166 H230"/><path d="M185 180 H215"/></g>
+  </svg>
+  <button class="release" id="release" aria-label="Release the lantern to open">
+    <svg class="big-lantern" viewBox="0 0 60 80" aria-hidden="true"><use href="#lantern"/></svg>
+    <span data-i18n="releaseHint"></span>
+  </button>
+</section>
+
+<!-- ============ INVITATION ============ -->
+<main class="page" id="page" hidden>
+  <div class="top-bar"><button class="pill" data-lang-toggle></button></div>
+
+  <header class="hero sec">
+    <p class="bismillah" data-show="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+    <p class="label" data-i18n="together"></p>
+    <h1 class="name" data-f="gFull"></h1>
+    <p class="par" data-f="gParents"></p>
+    <p class="amp">&amp;</p>
+    <h1 class="name" data-f="bFull"></h1>
+    <p class="par" data-f="bParents"></p>
+    <p class="msg" data-f="message"></p>
+    <p class="tap-sky" data-i18n="tapSky"></p>
+  </header>
+
+  <section class="sec fade">
+    <div class="glass date-card">
+      <p class="label" data-i18n="saveDate"></p>
+      <p class="d-week" data-date="weekday"></p>
+      <p class="d-num" data-date="day"></p>
+      <p class="d-month"><span data-date="month"></span> <span data-date="year"></span></p>
+      <p class="d-time" data-date="time"></p>
+      <p class="d-bangla" data-date="bangla"></p>
+      <div class="cd" data-cd-wrap>
+        <span><b data-cd="d">0</b><small data-i18n="days"></small></span>
+        <span><b data-cd="h">00</b><small data-i18n="hours"></small></span>
+        <span><b data-cd="m">00</b><small data-i18n="minutes"></small></span>
+        <span><b data-cd="s">00</b><small data-i18n="seconds"></small></span>
+      </div>
+      <p class="done" data-cd-done hidden data-i18n="married"></p>
+      <button class="btn" data-cal-main type="button" data-i18n="addCal"></button>
+    </div>
+  </section>
+
+  <section class="sec fade">
+    <p class="label" data-i18n="events"></p>
+    <h2 class="title" data-i18n="eventsH"></h2>
+    <div class="tags" data-events>
+      <template>
+        <article class="tag-card">
+          <span class="string" aria-hidden="true"></span>
+          <svg class="mini" viewBox="0 0 60 80" aria-hidden="true"><use href="#lantern"/></svg>
+          <h3 data-ev="title"></h3>
+          <p class="when"><span data-ev="weekday"></span> · <span data-ev="date"></span> · <span data-ev="time"></span></p>
+          <p class="where"><b data-ev="venue"></b><br><span data-ev="address"></span></p>
+          <p class="dress" data-ev-dress-wrap>👗 <span data-ev-dress></span></p>
+          <div class="acts"><a data-ev-map></a><button type="button" data-ev-cal></button></div>
+        </article>
+      </template>
+    </div>
+  </section>
+
+  <section class="sec fade">
+    <figure class="photo"><img data-photo alt=""></figure>
+  </section>
+
+  <section class="sec fade" data-show="gallery">
+    <p class="label" data-i18n="moments"></p>
+    <div class="gallery" data-gallery></div>
+  </section>
+
+  <section class="sec fade" id="rsvpSec" data-show="rsvp">
+    <p class="label" data-i18n="rsvp"></p>
+    <h2 class="title" data-i18n="rsvpH"></h2>
+    <p class="note" data-deadline></p>
+    <form class="rsvp glass" id="rsvpForm" novalidate>
+      <label><span data-i18n="yourName"></span><input name="name" maxlength="60" autocomplete="name"></label>
+      <div class="choice">
+        <label><input type="radio" name="attending" value="yes" checked><span data-i18n="accept"></span></label>
+        <label><input type="radio" name="attending" value="no"><span data-i18n="decline"></span></label>
+      </div>
+      <label data-guests><span data-i18n="guests"></span>
+        <select name="guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select>
+      </label>
+      <label><span data-i18n="wishLantern"></span><textarea name="message" rows="3" maxlength="200"></textarea></label>
+      <button class="btn" type="submit" data-i18n="sendLantern"></button>
+      <p class="status" role="status"></p>
+    </form>
+  </section>
+
+  <section class="sec fade end">
+    <div class="contacts" data-contacts></div>
+    <h2 class="title" data-i18n="thanks"></h2>
+    <p class="msg" data-f="closing"></p>
+    <p class="name small" data-f="couple"></p>
+    <p class="hash" data-f="hashtag"></p>
+    <p class="credit">Made with ♥ by <a id="brand" data-f="brand" href="https://shubhochithi.com/?ref=card" target="_blank" rel="noopener"></a> · <span class="lipighor-credit">Web font: <a href="https://lipighor.com" target="_blank" rel="noopener">lipighor.com</a></span></p>
+  </section>
+</main>
+
+<script src="data.js"></script>
+<script src="../shared/media.js?v=2"></script>
+<script src="../shared/extras.js?v=2"></script>
+<script src="../shared/core.js?v=2"></script>
+<script src="app.js?v=1"></script>
+</body>
+</html>

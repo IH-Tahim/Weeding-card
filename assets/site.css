@@ -256,3 +256,26 @@ body.l-en .hero h1, body.l-en .sec-head h2, body.l-en .order-wrap h1 { font-weig
 .t-rose .rarch b { position: absolute; left: 0; right: 0; bottom: 18px; text-align: center; font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 20px; color: #7d2a3b; }
 .t-rose .rseal { position: absolute; right: calc(50% - 110px); bottom: 26px; width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; background: radial-gradient(circle at 38% 32%, #f4e4e7, #c79aa4 30%, #a3727d 60%, #7e525c); color: #fbeff1; font-family: "Great Vibes", cursive; font-size: 18px; box-shadow: 0 6px 12px rgba(90,40,50,.4); }
 .new-tag { display: inline-block; vertical-align: middle; font-size: 11px; font-weight: 700; letter-spacing: .08em; background: #7a1f2b; color: #fff; padding: 2px 8px; border-radius: 99px; margin-left: 6px; }
+
+/* New design thumbnails (Nov 2026) */
+.t-linen { background: linear-gradient(90deg, #7b8b68 49.4%, #d9bd7a 49.4% 50.6%, #7b8b68 50.6%); }
+.t-linen .lin-plq { width: 118px; height: 150px; border-radius: 40px / 30px; background: linear-gradient(#fbf6ea, #ece2cb); box-shadow: 0 0 0 2px #b8975a, 0 0 0 6px rgba(251,246,234,.5), 0 14px 24px -10px rgba(30,40,24,.6); display: grid; place-content: center; text-align: center; gap: 6px; }
+.t-linen .lin-plq b { font-family: "Great Vibes", cursive; font-weight: 400; font-size: 38px; color: #4f6143; }
+.t-linen .lin-plq small { font-size: 8px; letter-spacing: .2em; color: #7a6334; }
+.t-kantha { background: #f6efe2 radial-gradient(rgba(31,58,107,.08) 1px, transparent 1.4px) 0 0 / 14px 14px; }
+.t-kantha .kan-ring { position: relative; width: 170px; height: 170px; display: grid; place-items: center; }
+.t-kantha .kan-ring i { position: absolute; inset: 0; border-radius: 50%; border: 2.5px dashed #b3261e; }
+.t-kantha .kan-ring i:nth-child(2) { inset: 16px; border-color: #1f3a6b; } .t-kantha .kan-ring i:nth-child(3) { inset: 32px; border-color: #3d7a4a; border-style: dotted; }
+.t-kantha .kan-ring b { font-family: "Li Shadhinata 2.0", "Noto Serif Bengali", serif; font-size: 24px; color: #1f3a6b; }
+.t-rick { background: repeating-linear-gradient(45deg, rgba(27,42,107,.06) 0 10px, transparent 10px 20px), #ffd400; }
+.t-rick .rk-plate { padding: 18px 22px; border-radius: 14px; background: #fff; border: 4px solid #e6007e; box-shadow: 0 0 0 7px #1b2a6b, 7px 9px 0 7px rgba(27,42,107,.3); text-align: center; display: grid; gap: 4px; }
+.t-rick .rk-plate b { font-family: "Li Shohid Tahmid Tamin", "Noto Serif Bengali", sans-serif; font-weight: 400; font-size: 32px; color: #e52521; text-shadow: 2px 2px 0 #ffd400, 4px 4px 0 #1b2a6b; }
+.t-rick .rk-plate small { font-family: "Li Ador Noirrit", sans-serif; font-size: 15px; color: #1b2a6b; font-weight: 600; }
+.t-fanush { background: linear-gradient(180deg, #1b2350, #4a2f6b 55%, #d98a8a 85%, #f4b46b); }
+.t-fanush .fn-sky { position: absolute; inset: 0; display: grid; place-items: center; }
+.t-fanush .fn-sky i { position: absolute; width: 22px; height: 30px; border-radius: 40% 40% 30% 30%; background: radial-gradient(circle at 50% 70%, #fff3c4, #ffb347 50%, #d9531e); box-shadow: 0 0 16px 4px rgba(255,170,70,.6); }
+.t-fanush .fn-sky i:nth-child(1) { left: 22%; top: 18%; } .t-fanush .fn-sky i:nth-child(2) { right: 20%; top: 30%; transform: scale(.7); } .t-fanush .fn-sky i:nth-child(3) { left: 44%; bottom: 18%; transform: scale(1.3); }
+.t-fanush .fn-sky b { font-family: "Cormorant Garamond", serif; font-weight: 500; font-size: 26px; color: #f8efe0; text-shadow: 0 0 18px rgba(255,180,100,.5); }
+.t-jhar { background: radial-gradient(ellipse at 50% 0, #fffdf8, #ece4d4); }
+.t-jhar .jh-arch { width: 120px; height: 170px; border-radius: 60px 60px 6px 6px / 70px 70px 6px 6px; background: radial-gradient(circle at 50% 60%, #fff4cf, #f1c470 55%, #b66a2a); box-shadow: 0 0 0 4px #c9a24f, 0 0 0 7px #fffaf0, 0 0 0 8px #8e1b2c, 0 18px 30px -14px rgba(80,50,20,.5); display: grid; place-items: center; }
+.t-jhar .jh-arch b { font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 30px; color: #8e1b2c; margin-top: 30px; }

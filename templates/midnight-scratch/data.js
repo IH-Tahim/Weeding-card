@@ -92,6 +92,180 @@ window.INVITE = {
   music: "",
   musicEnabled: true, // false = no music at all
 
+  // Extra sections (all optional). Delete any block you don't want; the calendar + Bangla date show automatically.
+  // icons: ring heart plate camera music car door tea chat home star moon flower gift bed
+  extras: {
+    story: [
+      {
+        when: {
+          en: "2019 · Dhaka University",
+          bn: "২০১৯ · ঢাকা বিশ্ববিদ্যালয়"
+        },
+        title: {
+          en: "The first hello",
+          bn: "প্রথম দেখা"
+        },
+        text: {
+          en: "A borrowed umbrella at TSC on a rainy Srabon afternoon.",
+          bn: "শ্রাবণের এক বৃষ্টিভেজা বিকেলে টিএসসিতে ধার করা একটা ছাতা।"
+        },
+        icon: "chat"
+      },
+      {
+        when: {
+          en: "2021 – 2024",
+          bn: "২০২১ – ২০২৪"
+        },
+        title: {
+          en: "Endless cha & rickshaw rides",
+          bn: "অগুনতি চা আর রিকশায় ঘোরা"
+        },
+        text: {
+          en: "Every evening ended at the same tea stall.",
+          bn: "প্রতিটা সন্ধ্যা শেষ হতো একই চায়ের দোকানে।"
+        },
+        icon: "tea"
+      },
+      {
+        when: {
+          en: "2025",
+          bn: "২০২৫"
+        },
+        title: {
+          en: "The proposal",
+          bn: "প্রস্তাব"
+        },
+        text: {
+          en: "Under the lights of Hatirjheel, she said yes.",
+          bn: "হাতিরঝিলের আলোয় সে বলেছিল — হ্যাঁ।"
+        },
+        icon: "ring"
+      },
+      {
+        when: {
+          en: "2027",
+          bn: "২০২৭"
+        },
+        title: {
+          en: "Forever begins",
+          bn: "নতুন পথচলা"
+        },
+        text: {
+          en: "And on this day we want you beside us.",
+          bn: "আর এই দিনে আপনাকে পাশে চাই।"
+        },
+        icon: "home"
+      }
+    ],
+    schedule: [
+      {
+        time: {
+          en: "6:30 PM",
+          bn: "সন্ধ্যা ৬:৩০"
+        },
+        title: {
+          en: "Guests arrive",
+          bn: "অতিথি আগমন"
+        },
+        icon: "door"
+      },
+      {
+        time: {
+          en: "7:00 PM",
+          bn: "সন্ধ্যা ৭:০০"
+        },
+        title: {
+          en: "Bride & groom arrive",
+          bn: "বর-কনের আগমন"
+        },
+        icon: "heart"
+      },
+      {
+        time: {
+          en: "7:30 PM",
+          bn: "সন্ধ্যা ৭:৩০"
+        },
+        title: {
+          en: "Akdh & dua",
+          bn: "আকদ ও দোয়া"
+        },
+        icon: "ring"
+      },
+      {
+        time: {
+          en: "8:30 PM",
+          bn: "রাত ৮:৩০"
+        },
+        title: {
+          en: "Dinner",
+          bn: "প্রীতিভোজ"
+        },
+        icon: "plate"
+      },
+      {
+        time: {
+          en: "9:30 PM",
+          bn: "রাত ৯:৩০"
+        },
+        title: {
+          en: "Photo session",
+          bn: "ফটোসেশন"
+        },
+        icon: "camera"
+      },
+      {
+        time: {
+          en: "10:30 PM",
+          bn: "রাত ১০:৩০"
+        },
+        title: {
+          en: "Farewell",
+          bn: "বিদায়"
+        },
+        icon: "moon"
+      }
+    ],
+    gifts: {
+      text: {
+        en: "Your presence and prayers are the greatest gift. If you still wish to send something, you can use bKash.",
+        bn: "আপনার উপস্থিতি ও দোয়াই আমাদের সবচেয়ে বড় উপহার। তবু কিছু পাঠাতে চাইলে বিকাশ ব্যবহার করতে পারেন।"
+      },
+      bkash: "01700-000000"
+    },
+    faq: [
+      {
+        q: {
+          en: "Is there parking?",
+          bn: "পার্কিং আছে কি?"
+        },
+        a: {
+          en: "Yes, free parking in the venue basement.",
+          bn: "হ্যাঁ, ভেন্যুর বেসমেন্টে ফ্রি পার্কিং আছে।"
+        }
+      },
+      {
+        q: {
+          en: "Can we bring children?",
+          bn: "শিশুদের আনা যাবে?"
+        },
+        a: {
+          en: "Of course! There will be a play corner for them.",
+          bn: "অবশ্যই! ওদের জন্য খেলার জায়গা থাকবে।"
+        }
+      },
+      {
+        q: {
+          en: "When will it end?",
+          bn: "অনুষ্ঠান কখন শেষ হবে?"
+        },
+        a: {
+          en: "Around 11 PM.",
+          bn: "রাত ১১টার মধ্যে।"
+        }
+      }
+    ]
+  },
+
   closing: {
     en: "Your presence and prayers will make our day complete.",
     bn: "আপনার উপস্থিতি ও দোয়া আমাদের দিনটিকে পরিপূর্ণ করবে।"

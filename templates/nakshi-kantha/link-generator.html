@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guest Link Generator</title>
+<meta name="robots" content="noindex">
+<style>
+  :root { --bg:#f8f2e6; --card:#fffcf5; --ink:#3d3121; --muted:#857659; --gold:#b48a3c; --line:#e3d3b2; --ok:#2e7d4f; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 "Hind Siliguri", system-ui, sans-serif; }
+  .wrap { max-width:720px; margin:0 auto; padding:24px 16px 60px; }
+  h1 { font-size:24px; margin:0 0 4px; color:var(--gold); }
+  p.lead { color:var(--muted); margin:0 0 22px; }
+  label { display:block; font-weight:600; margin:16px 0 6px; }
+  small { color:var(--muted); font-weight:400; }
+  input, textarea { width:100%; font:inherit; padding:10px 12px; border:1px solid var(--line); border-radius:6px; background:var(--card); color:var(--ink); }
+  textarea { min-height:120px; }
+  .row { display:flex; gap:8px; flex-wrap:wrap; margin-top:16px; }
+  button, .btn { font:inherit; font-size:14px; padding:9px 14px; border-radius:6px; border:1px solid var(--gold); background:var(--gold); color:#fff; cursor:pointer; text-decoration:none; display:inline-block; }
+  button.ghost, .btn.ghost { background:transparent; color:var(--gold); }
+  ul { list-style:none; padding:0; margin:20px 0 0; display:grid; gap:8px; }
+  li { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:10px 12px; display:grid; gap:6px; }
+  li .name { font-weight:600; }
+  li code { font-size:13px; color:var(--muted); word-break:break-all; }
+  li .acts { display:flex; gap:6px; flex-wrap:wrap; }
+  .done { color:var(--ok); font-size:13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Guest Link Generator</h1>
+  <p class="lead">Each guest gets a link that greets them by name ("Dear Tahim"). Send each link on WhatsApp.</p>
+
+  <label>Invitation link <small>(the live card URL)</small></label>
+  <input id="base" placeholder="https://rafi-weds-nusrat.yourbrand.com/">
+
+  <label>Guest names <small>(one per line)</small></label>
+  <textarea id="names" placeholder="Tahim&#10;Rahim Uncle&#10;Karim Bhai & Family"></textarea>
+
+  <label>Message <small>({name} and {link} are filled in)</small></label>
+  <textarea id="msg">Assalamu Alaikum {name},
+You are cordially invited to our wedding. Please open your invitation 💌
+{link}</textarea>
+
+  <label><input type="checkbox" id="bn" style="width:auto"> Open the card in Bangla</label>
+
+  <div class="row">
+    <button id="make">Make links</button>
+    <button class="ghost" id="copyAll">Copy all as list</button>
+    <button class="ghost" id="csv">Download CSV</button>
+  </div>
+  <ul id="out"></ul>
+</div>
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const base = $("base");
+  try { base.value = localStorage.getItem("lg-base") || new URL("index.html", location.href).href; } catch (e) { base.value = new URL("index.html", location.href).href; }
+  let rows = [];
+
+  function linkFor(name) {
+    const u = new URL(base.value.trim() || location.href);
+    u.searchParams.set("to", name);
+    if ($("bn").checked) u.searchParams.set("lang", "bn"); else u.searchParams.delete("lang");
+    return u.href;
+  }
+
+  function make() {
+    try { localStorage.setItem("lg-base", base.value.trim()); } catch (e) {}
+    const names = $("names").value.split("\n").map((s) => s.trim()).filter(Boolean);
+    rows = names.map((n) => ({ name: n, link: linkFor(n) }));
+    const out = $("out"); out.textContent = "";
+    rows.forEach((r) => {
+      const li = document.createElement("li");
+      const nm = document.createElement("span"); nm.className = "name"; nm.textContent = r.name;
+      const code = document.createElement("code"); code.textContent = r.link;
+      const acts = document.createElement("div"); acts.className = "acts";
+      const text = $("msg").value.replaceAll("{name}", r.name).replaceAll("{link}", r.link);
+      const wa = document.createElement("a"); wa.className = "btn"; wa.textContent = "Send on WhatsApp";
+      wa.href = "https://wa.me/?text=" + encodeURIComponent(text); wa.target = "_blank"; wa.rel = "noopener";
+      const cp = document.createElement("button"); cp.className = "ghost"; cp.textContent = "Copy message";
+      const ok = document.createElement("span"); ok.className = "done";
+      cp.onclick = () => navigator.clipboard.writeText(text).then(() => { ok.textContent = "Copied ✓"; });
+      const op = document.createElement("a"); op.className = "btn ghost"; op.textContent = "Preview";
+      op.href = r.link; op.target = "_blank"; op.rel = "noopener";
+      acts.append(wa, cp, op, ok);
+      li.append(nm, code, acts);
+      out.append(li);
+    });
+  }
+
+  $("make").onclick = make;
+  $("copyAll").onclick = () => { if (!rows.length) make(); navigator.clipboard.writeText(rows.map((r) => `${r.name}: ${r.link}`).join("\n")); };
+  $("csv").onclick = () => {
+    if (!rows.length) make();
+    const q = (s) => '"' + String(s).replace(/"/g, '""') + '"';
+    const blob = new Blob(["﻿Name,Link\n" + rows.map((r) => q(r.name) + "," + q(r.link)).join("\n")], { type: "text/csv" });
+    const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "guest-links.csv"; a.click();
+  };
+})();
+</script>
+</body>
+</html>
